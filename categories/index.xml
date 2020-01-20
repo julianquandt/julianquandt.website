@@ -2,29 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Julian Quandt</title>
-    <link>https://julianquandt.github.io/categories/</link>
-      <atom:link href="https://julianquandt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/</link>
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
-      <link>https://julianquandt.github.io/categories/</link>
+      <link>/categories/</link>
     </image>
     
     <item>
+      <title>phd-project</title>
+      <link>/categories/phd-project/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>/categories/phd-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Power Analysis</title>
-      <link>https://julianquandt.github.io/categories/power-analysis/</link>
+      <link>/categories/power-analysis/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://julianquandt.github.io/categories/power-analysis/</guid>
+      <guid>/categories/power-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>https://julianquandt.github.io/categories/statistics/</link>
+      <link>/categories/statistics/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://julianquandt.github.io/categories/statistics/</guid>
+      <guid>/categories/statistics/</guid>
       <description></description>
     </item>
     
