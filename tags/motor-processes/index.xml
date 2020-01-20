@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Motor Processes | Julian Quandt</title>
-    <link>/tags/motor-processes/</link>
-      <atom:link href="/tags/motor-processes/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.github.io/tags/motor-processes/</link>
+      <atom:link href="https://julianquandt.github.io/tags/motor-processes/index.xml" rel="self" type="application/rss+xml" />
     <description>Motor Processes</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Motor Processes</title>
-      <link>/tags/motor-processes/</link>
+      <link>https://julianquandt.github.io/tags/motor-processes/</link>
     </image>
     
     <item>
       <title>The Role of Attention in Explaining the No-Go Devaluation Effect: Effects on Appetitive Food Items</title>
-      <link>/publication/quandt-role-attention-explaining-2019/</link>
+      <link>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/quandt-role-attention-explaining-2019/</guid>
+      <guid>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</guid>
       <description></description>
     </item>
     
