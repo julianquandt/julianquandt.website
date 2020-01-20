@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Attention | Julian Quandt</title>
+    <link>https://julianquandt.github.io/tags/attention/</link>
+      <atom:link href="https://julianquandt.github.io/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    <description>Attention</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Attention</title>
+      <link>https://julianquandt.github.io/tags/attention/</link>
+    </image>
+    
+    <item>
+      <title>The Role of Attention in Explaining the No-Go Devaluation Effect: Effects on Appetitive Food Items</title>
+      <link>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

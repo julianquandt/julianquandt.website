@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julian Quandt</title>
+    <link>https://julianquandt.github.io/authors/julian-quandt/</link>
+      <atom:link href="https://julianquandt.github.io/authors/julian-quandt/index.xml" rel="self" type="application/rss+xml" />
+    <description>Julian Quandt</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 08 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Julian Quandt</title>
+      <link>https://julianquandt.github.io/authors/julian-quandt/</link>
+    </image>
+    
+    <item>
+      <title>Extending the Statistical Toolbox @ BSI PhD-Day 2019</title>
+      <link>https://julianquandt.github.io/talk/extending_stats_toolbox/</link>
+      <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/talk/extending_stats_toolbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When Mere Action versus Inaction Leads to Robust Preference Change</title>
+      <link>https://julianquandt.github.io/publication/chen-when-mere-action-2019/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/publication/chen-when-mere-action-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Updating the P-Curve Analysis of Carbine and Larson with Results from Preregistered Experiments</title>
+      <link>https://julianquandt.github.io/publication/veling-updating-pcurve-analysis-2019/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/publication/veling-updating-pcurve-analysis-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to `brms` @ SIPS 2019</title>
+      <link>https://julianquandt.github.io/talk/brms-at-sips/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/talk/brms-at-sips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Role of Attention in Explaining the No-Go Devaluation Effect: Effects on Appetitive Food Items</title>
+      <link>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://julianquandt.github.io/publication/quandt-role-attention-explaining-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
