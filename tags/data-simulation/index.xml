@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data-simulation | Julian Quandt</title>
-    <link>/tags/data-simulation/</link>
-      <atom:link href="/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.github.io/tags/data-simulation/</link>
+      <atom:link href="https://julianquandt.github.io/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
     <description>data-simulation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>data-simulation</title>
-      <link>/tags/data-simulation/</link>
+      <link>https://julianquandt.github.io/tags/data-simulation/</link>
     </image>
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part I</title>
-      <link>/post/power-analysis-by-data-simulation-in-r-part-i/</link>
+      <link>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
+      <guid>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
       <description>
 
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.github.io/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;div id=&#34;power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Power Analysis by Data Simulation in &lt;code&gt;R&lt;/code&gt; - Part I: Theoretical introduction to simulation&lt;/h1&gt;
@@ -37,7 +37,7 @@ First, they urge the user to familiarize themselves with a new piece of software
 Second, and more importantly, these interfaces promote a statistical way of thinking that often leaves the user confused with what the ever-changing parameters (think of these &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f^2\)&lt;/span&gt; and vague “group-size” and “measurement-point” fields) that need to be filled in mean.
 Moreover, these parameters differ for most designs and give an impression that power-analysis is complicated business better left to statisticians or that it might not be worth the effort.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 1. Me trying to figure out how to use a standard power-analysis software.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -68,7 +68,7 @@ At the end of part IV of this tutorial, you will know how to do your own custom 
 &lt;div id=&#34;power-analysis-by-simulation-a-sustainable-alternative&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Power Analysis by Simulation (a sustainable alternative)&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 2. The proof that there are alternative ways to how we normally get our power.&lt;/em&gt;
 &lt;/figcaption&gt;
