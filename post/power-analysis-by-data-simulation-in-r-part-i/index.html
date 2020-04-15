@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This part provides an introduction, some background on power-calculation and data-simulation.">
+  <meta name="description" content="This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="alternate" hreflang="en-us" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
 
@@ -216,7 +216,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="canonical" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
   
@@ -230,15 +230,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Julian Quandt">
-  <meta property="og:url" content="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <meta property="og:url" content="/post/power-analysis-by-data-simulation-in-r-part-i/">
   <meta property="og:title" content="Power Analysis by Data Simulation in R - Part I | Julian Quandt">
-  <meta property="og:description" content="This part provides an introduction, some background on power-calculation and data-simulation."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-01-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-01-20T15:54:54&#43;00:00">
+    <meta property="article:modified_time" content="2020-04-15T17:31:42&#43;00:00">
   
 
   
@@ -264,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/"
+    "@id": "/post/power-analysis-by-data-simulation-in-r-part-i/"
   },
   "headline": "Power Analysis by Data Simulation in R - Part I",
   
   "datePublished": "2020-01-16T00:00:00Z",
-  "dateModified": "2020-01-20T15:54:54Z",
+  "dateModified": "2020-04-15T17:31:42Z",
   
   "author": {
     "@type": "Person",
@@ -281,10 +281,10 @@
     "name": "Julian Quandt",
     "logo": {
       "@type": "ImageObject",
-      "url": "img/https://julianquandt.github.io/"
+      "url": "img//"
     }
   },
-  "description": "This part provides an introduction, some background on power-calculation and data-simulation."
+  "description": "This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example."
 }
 </script>
 
@@ -565,7 +565,7 @@
           Last updated on
       
     
-    Jan 20, 2020
+    Apr 15, 2020
   </span>
   
 
@@ -652,6 +652,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <html>
@@ -722,16 +723,75 @@ How often should we toss the coin until we are surprised enough to conclude that
 Well, assume we observed 3 heads out of 3 total tosses.
 Now we can count all ways that this could have happened with a fair coin and compare it to all possible outcomes that our coin toss experiment might have produced.
 These possibilities are (for a fair coin or any coin that cannot produce only heads or only tails):</p>
-<ul>
-<li>Possibility 1: HEAD-HEAD-HEAD</li>
-<li>Possibility 2: HEAD-HEAD-TAIL</li>
-<li>Possibility 3: HEAD-TAIL-TAIL</li>
-<li>Possibility 4: TAIL-TAIL-TAIL</li>
-<li>Possibility 5: TAIL-TAIL-HEAD</li>
-<li>Possibiltiy 6: TAIL-HEAD-HEAD</li>
-<li>Possibility 7: TAIL-HEAD-TAIL</li>
-<li>Possibility 8: HEAD-TAIL-HEAD</li>
-</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Toss #1</th>
+<th>Toss #2</th>
+<th>Toss #3</th>
+<th>number of heads</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Possibility #1</td>
+<td>HEAD</td>
+<td>HEAD</td>
+<td>HEAD</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Possibility #2</td>
+<td>HEAD</td>
+<td>HEAD</td>
+<td>TAIL</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Possibility #3</td>
+<td>HEAD</td>
+<td>TAIL</td>
+<td>TAIL</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Possibility #4</td>
+<td>TAIL</td>
+<td>TAIL</td>
+<td>TAIL</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Possibility #5</td>
+<td>TAIL</td>
+<td>TAIL</td>
+<td>HEAD</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Possibility #6</td>
+<td>TAIL</td>
+<td>HEAD</td>
+<td>HEAD</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Possibility #7</td>
+<td>TAIL</td>
+<td>HEAD</td>
+<td>TAIL</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Possibility #8</td>
+<td>HEAD</td>
+<td>TAIL</td>
+<td>HEAD</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 <p>Notice that a possilibity is not only defined by the number of heads and tails but also by the order in which they occur<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.
 Now we see that only 1 order of events (Possibility 1) can produce 3 out of 3 heads.
 If our coin is fair, each of these events should be equally likely and we can see that when flipping a fair coin 3 times, in only 1 out of 8 cases (12.5%) we will get 3 heads (Possibility 1).</p>
@@ -798,7 +858,7 @@ p_heads &lt;- pbinom(q = n_heads, size = 100, prob = .5, lower.tail = F)  # get 
 plot(n_heads, p_heads)
 abline(h = .01)
 abline(v = n_heads[p_heads &lt; .01][1])</code></pre>
-<p><img src="2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png" width="672" /></p>
+<p><img src="/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png" width="672" /></p>
 <p>Using the above we see that the at 62 tosses, i.e. the 9th element of the vector is the first probability that is smaller than .01, in this case 0.006.
 In other words, getting 62 or more heads in 100 tosses would only happen extremely rarely, in 1 out of 62 cases.
 Thus actually getting 62 heads is pretty surprising and if something like that happened we might conclude that a coin is unfair.</p>
@@ -842,7 +902,7 @@ Let’s say you only want to have a 10 percent chance of not detecting it if it 
 <figure>
 <img src="https://media1.tenor.com/images/507d58a626fa15cb0b57e57f7a1cb873/tenor.gif?itemid=9698651" width="500"/>
 <figcaption>
-<em>Figure 3. An illustrative example of when a coin-toss really matters.</em><a href="#Figure-3-Ref">↩</a>
+<em>Figure 3. An illustrative example of when a coin-toss really matters.</em><a href="#Figure-3-Ref">↩︎</a>
 </figcaption>
 </figure>
 <p></a></p>
@@ -894,7 +954,7 @@ Figure 4 shows the increase in power with increasing sample-size.</p>
 abline(h = .90, col = &quot;red&quot;)
 axis(side = 1, at = seq(0,(n_toss-1),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))</code></pre>
-<img src="2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png" width="672" />
+<img src="/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png" width="672" />
 <figcaption>
 <em>Figure 4. Change in power until we reach 90% indicated by the red horizontal line.</em>
 </figcaption>
@@ -993,7 +1053,7 @@ We can also plot all these values again as done in Figure 6.</p>
 abline(h = .90, col = &quot;red&quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))</code></pre>
-<img src="2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png" width="672" />
+<img src="/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png" width="672" />
 <figcaption>
 <em>Figure 6. Observed power in the simulation.</em>
 </figcaption>
@@ -1032,7 +1092,7 @@ If we look at Figure 7, we also see that now the power-increase follows a more s
 abline(h = .90, col = &quot;red&quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))</code></pre>
-<img src="2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png" width="672" />
+<img src="/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png" width="672" />
 <figcaption>
 <em>Figure 7. Power curve for a more precise simulation.</em>
 </figcaption>
@@ -1063,17 +1123,17 @@ This is the power of our test.</li>
 <ol>
 <li id="fn1"><p>The answer to the question - <em>Should we be surprised</em> - is basically what we get when we do a statistical test and inspect the p-value.
 Ok, this is not exactly true but p-values <em>can</em> actually be expressed in terms of how surprised we should be about an observation, given a certain hypothesis (e.g. when we assume no difference between groups as the null-hypothesis).
-To read an awesome explanation about this, look at <a href="https://lesslikely.com/statistics/s-values/">this</a> really cool blog-post about <em>s-values</em> by <a href="https://twitter.com/dailyzad">Zad Chow</a>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+To read an awesome explanation about this, look at <a href="https://lesslikely.com/statistics/s-values/">this</a> really cool blog-post about <em>s-values</em> by <a href="https://twitter.com/dailyzad">Zad Chow</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Why is the order important here?
 Because orders do identify unique outcomes.
 If we do not consider entire sequences, we might be inclined to think that there are only four possibilities: 3xHEADS, 2xHEADS, 1xHEADS and 0xHEADS, and that each of these events is equally likely.
-However, how likely eah of these events is depends on how many different sequences can produce it.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+However, how likely eah of these events is depends on how many different sequences can produce it.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>I looked it up and apparently this number (a one followed by 30 zeros) is called a <em>Nonillion</em>. It is so big, that apparently the number of bacterial cells on earth is estimated at <a href="https://www.pnas.org/content/95/12/6578">5 Nonillion</a>.
-So I do not recommend trying to write down all possibilities…<a href="#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p><code>R</code> excludes the first number here, so that is why we start at 54 rather than 55<a href="#fnref4" class="footnote-back">↩</a></p></li>
+So I do not recommend trying to write down all possibilities…<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p><code>R</code> excludes the first number here, so that is why we start at 54 rather than 55<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
 <li id="fn5"><p>Notice however, that this alpha-level of .05 implies that we are surprised enough if something only happens in 1 out of 20 cases.
 There have, however, been repeated calls to <a href="https://www.nature.com/articles/s41562%20017%200189%20z">change the standard alpha-level</a>, to <a href="https://www.nature.com/articles/s41562-018-0311-x">justify it based on the specific situation you are in</a> or to <a href="https://arxiv.org/abs/1709.07588">abandon it all together</a> alongside other ideas of using alternatives like the <a href="https://link.springer.com/article/10.3758/s13423-011-0088-7">Bayes-Factor</a>.
-For the most part, in this tutorial I will try to justify the alpha that I choose and to stay away from the “magical” .05 as I agree with the justification approach in that we should at least <em>try</em> and think harder about the alpha-level and it’s meaning.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+For the most part, in this tutorial I will try to justify the alpha that I choose and to stay away from the “magical” .05 as I agree with the justification approach in that we should at least <em>try</em> and think harder about the alpha-level and it’s meaning.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 <li id="fn6"><p>It might be confusing that i say “specify” a null-hypothesis here.
 Is the null-hypothesis not by definition that there is no difference, i.e. that the coin is fair at 50%.
 Well, yes and no.
@@ -1083,16 +1143,16 @@ This is, we could even find the unfairness of the coin if it is only 51%.
 But is this 51% really big enough to care about?
 Maybe, maybe not, but we can define a <em>smallest effect size of interest</em> and use <em>Equivalance testing</em> in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
 Equivalence testing is not new but surprisingly unknown and/or uncommon in the psychological literature.
-If you are interested in Equivalence Testing, you should check out the great <a href="https://journals.sagepub.com/doi/10.1177/2515245918770963">paper(s)</a> and <a href="http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html">blog-post(s)</a> about it by <a href="http://daniellakens.blogspot.com/">Daniel Lakens</a> and colleagues.<a href="#fnref6" class="footnote-back">↩</a></p></li>
+If you are interested in Equivalence Testing, you should check out the great <a href="https://journals.sagepub.com/doi/10.1177/2515245918770963">paper(s)</a> and <a href="http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html">blog-post(s)</a> about it by <a href="http://daniellakens.blogspot.com/">Daniel Lakens</a> and colleagues.<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
 <li id="fn7"><p>Software like G*Power often uses different standardized effect sizes for different anaylses.
 However, in many cases standardized effect-sizes can be converted into each other.
-If you ever need to do such a thing, <a href="http://hauselin.com">Hause Lin</a> made a nice <a href="http://escal.site/">conversion app</a>.<a href="#fnref7" class="footnote-back">↩</a></p></li>
-<li id="fn8"><p>For those unfamiliar with this reference: First, consider watching Dark Knight, it’s a great movie. Second, this character (Harvey Dent, a former state lawyer) decides whether or not to sentence (kill) people by tossing a coin.<a href="#fnref8" class="footnote-back">↩</a></p></li>
-<li id="fn9"><p>Thereby justifying our alpha-level in this toy example.<a href="#fnref9" class="footnote-back">↩</a></p></li>
-<li id="fn10"><p>You can see that is it not a simulation as you will always get the <em>exact same</em> result whenever you run the code above.<a href="#fnref10" class="footnote-back">↩</a></p></li>
+If you ever need to do such a thing, <a href="http://hauselin.com">Hause Lin</a> made a nice <a href="http://escal.site/">conversion app</a>.<a href="#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>For those unfamiliar with this reference: First, consider watching Dark Knight, it’s a great movie. Second, this character (Harvey Dent, a former state lawyer) decides whether or not to sentence (kill) people by tossing a coin.<a href="#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Thereby justifying our alpha-level in this toy example.<a href="#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>You can see that is it not a simulation as you will always get the <em>exact same</em> result whenever you run the code above.<a href="#fnref10" class="footnote-back">↩︎</a></p></li>
 <li id="fn11"><p>In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
-If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.<a href="#fnref11" class="footnote-back">↩</a></p></li>
-<li id="fn12"><p>Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangable, allowing us to calculate the mean in the same way.<a href="#fnref12" class="footnote-back">↩</a></p></li>
+If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.<a href="#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangable, allowing us to calculate the mean in the same way.<a href="#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
@@ -1125,7 +1185,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1138,7 +1198,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1151,7 +1211,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1164,7 +1224,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1177,7 +1237,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1190,7 +1250,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1230,7 +1290,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://julianquandt.github.io/">Julian Quandt</a></h5>
+      <h5 class="card-title"><a href="/">Julian Quandt</a></h5>
       <h6 class="card-subtitle">PhD student</h6>
       <p class="card-text">just a regular person.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -1442,6 +1502,16 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
   
   <div class="container">
     <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
   
 
   <p class="powered-by">
