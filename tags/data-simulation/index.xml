@@ -2,26 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data-simulation | Julian Quandt</title>
-    <link>/tags/data-simulation/</link>
-      <atom:link href="/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.github.io/tags/data-simulation/</link>
+      <atom:link href="https://julianquandt.github.io/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
     <description>data-simulation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>data-simulation</title>
-      <link>/tags/data-simulation/</link>
+      <link>https://julianquandt.github.io/tags/data-simulation/</link>
     </image>
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part I</title>
-      <link>/post/power-analysis-by-data-simulation-in-r-part-i/</link>
+      <link>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
+      <guid>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
       <description>
+&lt;script src=&#34;https://julianquandt.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation&#34;&gt;Power Analysis by Data Simulation in &lt;code&gt;R&lt;/code&gt; - Part I: Theoretical introduction to simulation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#back-to-power&#34;&gt;Back to Power&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#finally-an-actual-power-simulation.&#34;&gt;Finally, an actual power simulation.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#footnotes&#34;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.github.io/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;div id=&#34;power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Power Analysis by Data Simulation in &lt;code&gt;R&lt;/code&gt; - Part I: Theoretical introduction to simulation&lt;/h1&gt;
@@ -37,14 +47,14 @@ First, they urge the user to familiarize themselves with a new piece of software
 Second, and more importantly, these interfaces promote a statistical way of thinking that often leaves the user confused with what the ever-changing parameters (think of these &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f^2\)&lt;/span&gt; and vague “group-size” and “measurement-point” fields) that need to be filled in mean.
 Moreover, these parameters differ for most designs and give an impression that power-analysis is complicated business better left to statisticians or that it might not be worth the effort.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 1. Me trying to figure out how to use a standard power-analysis software.&lt;/em&gt;
 &lt;/figcaption&gt;
 &lt;figure&gt;
 &lt;p&gt;However, this impression changed dramatically for me, once I changed my ways and started doing power analysis by simulation.
 Moreover, learning how to simulate data can of course not only be of use for power analysis but is a useful skill to in every research project.
-When we simulate data, we can see whether what we &lt;em&gt;think&lt;/em&gt; about the data-generating process will acturally &lt;em&gt;result&lt;/em&gt; in the patterns that we would expect.
+When we simulate data, we can see whether what we &lt;em&gt;think&lt;/em&gt; about the data-generating process will actually &lt;em&gt;result&lt;/em&gt; in the patterns that we would expect.
 In other words, we can do theoretical experiments to see whether if everything goes as we would expect, we would also find the results that we would expect.
 Especially when our analyses become more complex, all the different parts in our model tend to interact and it is easy to get lost.
 By simulating data before conducting an experiment, we will be forced (and able) to specify more precisely how we think a theoretical model or prediction will be reflected in the data.&lt;/p&gt;
@@ -68,7 +78,7 @@ At the end of part IV of this tutorial, you will know how to do your own custom 
 &lt;div id=&#34;power-analysis-by-simulation-a-sustainable-alternative&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Power Analysis by Simulation (a sustainable alternative)&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 2. The proof that there are alternative ways to how we normally get our power.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -88,18 +98,77 @@ How often should we toss the coin until we are surprised enough to conclude that
 Well, assume we observed 3 heads out of 3 total tosses.
 Now we can count all ways that this could have happened with a fair coin and compare it to all possible outcomes that our coin toss experiment might have produced.
 These possibilities are (for a fair coin or any coin that cannot produce only heads or only tails):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Possibility 1: HEAD-HEAD-HEAD&lt;/li&gt;
-&lt;li&gt;Possibility 2: HEAD-HEAD-TAIL&lt;/li&gt;
-&lt;li&gt;Possibility 3: HEAD-TAIL-TAIL&lt;/li&gt;
-&lt;li&gt;Possibility 4: TAIL-TAIL-TAIL&lt;/li&gt;
-&lt;li&gt;Possibility 5: TAIL-TAIL-HEAD&lt;/li&gt;
-&lt;li&gt;Possibiltiy 6: TAIL-HEAD-HEAD&lt;/li&gt;
-&lt;li&gt;Possibility 7: TAIL-HEAD-TAIL&lt;/li&gt;
-&lt;li&gt;Possibility 8: HEAD-TAIL-HEAD&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Notice that a possilibity is not only defined by the number of heads and tails but also by the order in which they occur&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.
-Now we see that only 1 order of events (Possibility 1) can produce 3 out of 3 heads.
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Toss #1&lt;/th&gt;
+&lt;th&gt;Toss #2&lt;/th&gt;
+&lt;th&gt;Toss #3&lt;/th&gt;
+&lt;th&gt;number of heads&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Possibility #1&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Possibility #2&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Possibility #3&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Possibility #4&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Possibility #5&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Possibility #6&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Possibility #7&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Possibility #8&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;TAIL&lt;/td&gt;
+&lt;td&gt;HEAD&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notice that a possibility is not only defined by the number of heads and tails but also by the order in which they occur&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. We can also calculate the number of possibilities as &lt;span class=&#34;math inline&#34;&gt;\(2^x\)&lt;/span&gt; where 2 means that we have 2 possible outcomes per toss and &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is the number of tosses. In this case the number of possibilities is therefore &lt;span class=&#34;math inline&#34;&gt;\(2^3 = 8\)&lt;/span&gt;.
+Only 1 of these 8 events (Possibility 1) can produce 3 out of 3 heads.
 If our coin is fair, each of these events should be equally likely and we can see that when flipping a fair coin 3 times, in only 1 out of 8 cases (12.5%) we will get 3 heads (Possibility 1).&lt;/p&gt;
 &lt;p&gt;Do we find this surprising enough to conclude that the coin that we flipped is unfair?
 Maybe, maybe not.
@@ -108,13 +177,21 @@ Imagine we observed 55 heads in 100 flips.
 We could now start writing down all possible outcomes, but that would take some time.
 This time, there are not 8 but &lt;span class=&#34;math inline&#34;&gt;\(2^{100}\)&lt;/span&gt; = 1,267,651,000,000,000,000,000,000,000,000 possible sequences of heads and tails, and we would have to count the ones that produce &lt;em&gt;at least&lt;/em&gt; 55 heads to see how often that would happen if our coin is fair&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;However, luckily we are not the first who are interested in these kind of problems and we can make use of mathematical formulas that other people figured out for us.&lt;/p&gt;
-&lt;p&gt;Now the story gets a bit technical I’m afraid, and gets us back to stats 101 where we might have learned about &lt;em&gt;probability mass function.&lt;/em&gt; In this case we need the &lt;strong&gt;binomial&lt;/strong&gt; probability mass function.
+&lt;p&gt;In this case we need the &lt;strong&gt;binomial&lt;/strong&gt; probability mass function.
 In short, this function defines how often we can get each outcome, assuming a certain chance of getting heads or tails.
-If you are interested in seeing this function and see how we can handcode it in &lt;code&gt;R&lt;/code&gt;, then click below.
+If you are interested in seeing this function and see how we can hand-code it in &lt;code&gt;R&lt;/code&gt;, then click on the info-box below.
 If you do not want to get too much into the technicalities here, you can also just read on.&lt;/p&gt;
 &lt;p&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;details&gt;
-&lt;summary&gt;&lt;strong&gt;CLICK HERE FOR MORE ON BINOMIAL LIKELIHOOD&lt;/strong&gt;&lt;/summary&gt;
+&lt;p&gt;&lt;summary&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;!-- raw HTML omitted --&gt;Click here to extend information about the binomial likelihood function&lt;!-- raw HTML omitted --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/summary&gt;&lt;/p&gt;
+&lt;div class=&#34;notebox&#34;&gt;
 &lt;p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(x)=\frac{N!}{x!(N-x)!}\pi^x(1-\pi)^{N-x} \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;For people who are not used to mathematical formulas, this might already look intimidating. However, all we need to know right now is that this formula gives us the probability of getting x heads &lt;span class=&#34;math inline&#34;&gt;\(P{(x)}\)&lt;/span&gt; (i.e. the number of ways we get x heads divided by N tosses):
@@ -143,13 +220,14 @@ print(probs[1:10])&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we got all the probabilities for each of the amounts of heads that we are interested in.
 By summing them up we get what we need - the probability of getting at least 55 heads in 100 tosses, &lt;code&gt;sum(probs)&lt;/code&gt; = 0.18 or 18 percent.&lt;/p&gt;
 &lt;/p&gt;
+&lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;As mentioned, fortunately, the counting of possibilities is pre-implemented into &lt;code&gt;R&lt;/code&gt;.
 Running &lt;code&gt;pbinom(x = 54, size = 100, prob = .5, lower.tail = FALSE)&lt;/code&gt; (I will explain below) we can get R to calculate the proportion of samples that would result in &lt;em&gt;more than&lt;/em&gt; &lt;code&gt;x&lt;/code&gt; times heads in an experiment of &lt;code&gt;size&lt;/code&gt; 100 (i.e. tossing a coin 100 times).
 Executing this in &lt;code&gt;R&lt;/code&gt; we get 0.18.&lt;/p&gt;
 &lt;p&gt;In short, the &lt;code&gt;pbinom&lt;/code&gt; function gives us the answer to the question &#34;what is proportion of possible toss-sequences that results in more than &lt;code&gt;x = 54&lt;/code&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; heads if we toss a coin &lt;code&gt;size=100&lt;/code&gt; times if our hypothesis is that the coin is fair with a probability of heads of &lt;code&gt;prob = .5&lt;/code&gt;.
-The &lt;code&gt;lower.tail = FALSE&lt;/code&gt; argument tells &lt;code&gt;R&lt;/code&gt; that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or more heads rather than 54 or less).
+The &lt;code&gt;lower.tail = FALSE&lt;/code&gt; argument tells &lt;code&gt;R&lt;/code&gt; that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or &lt;em&gt;more&lt;/em&gt; heads rather than 54 or &lt;em&gt;less&lt;/em&gt;).
 In other words, every 6th out of the &lt;span class=&#34;math inline&#34;&gt;\(2^{100}\)&lt;/span&gt; possible sequences has 55 or more heads.
 Again, this is not really surprising and would probably not make us conclude that a coin is definitely unfair.&lt;/p&gt;
 &lt;p&gt;If, for example, we think that a coin is unfair if the amount of heads (or more heads) has only a probability of .01 or 1 percent, what amount of heads would allow us to draw such a conclusion when tossing a coin 100 times?
@@ -164,7 +242,7 @@ p_heads &amp;lt;- pbinom(q = n_heads, size = 100, prob = .5, lower.tail = F)  # 
 plot(n_heads, p_heads)
 abline(h = .01)
 abline(v = n_heads[p_heads &amp;lt; .01][1])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Using the above we see that the at 62 tosses, i.e. the 9th element of the vector is the first probability that is smaller than .01, in this case 0.006.
 In other words, getting 62 or more heads in 100 tosses would only happen extremely rarely, in 1 out of 62 cases.
 Thus actually getting 62 heads is pretty surprising and if something like that happened we might conclude that a coin is unfair.&lt;/p&gt;
@@ -173,34 +251,40 @@ Thus actually getting 62 heads is pretty surprising and if something like that h
 &lt;/div&gt;
 &lt;div id=&#34;back-to-power&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Back to Power&lt;/h1&gt;
-&lt;p&gt;But what is the &lt;strong&gt;power&lt;/strong&gt; of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?&lt;/p&gt;
-&lt;p&gt;In the example above we already used three concepts from frequentist statistical testing:&lt;/p&gt;
+&lt;p&gt;In this coin-toss example, we run a statistical test about the fairness of the coin.
+But what is the &lt;strong&gt;power&lt;/strong&gt; of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?&lt;/p&gt;
+&lt;p&gt;Actually, we already used three concepts from Frequentist statistical testing:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;strong&gt;null-hypothesis&lt;/strong&gt;: we assumed that the coin is fair&lt;/li&gt;
 &lt;li&gt;The &lt;strong&gt;p-value&lt;/strong&gt; : the probability that we calculated above when checking how likely 62 or more heads are (we got 0.006).&lt;/li&gt;
 &lt;li&gt;The &lt;strong&gt;alpha level&lt;/strong&gt; : (i.e. where people conventionally use .05 in psychological literature&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;) is the threshold that we picked for concluding it would surprise us enough to say that the coin must be unfair, i.e. the probability of .01. In other words, it is the chance that we conclude that a coin is unfair even if it is actually fair (the one percent of cases where 62 or more heads would happen even with a fair coin).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In a proper power analysis, all of these need to be specified in addition to an &lt;em&gt;alternative hypothesis&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In a proper power analysis, all of these need to be specified in addition to an &lt;em&gt;alternative hypothesis&lt;/em&gt;. Let’s give it a try and specify them to run a power-analysis&lt;/p&gt;
 &lt;div id=&#34;specifying-the-null-hypothesis.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Specifying the null-hypothesis.&lt;/h2&gt;
 &lt;p&gt;Again, we will assume that a coin is fair and will produce heads with a probability of .50&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;specyfing-the-alternative-hypothesis-aka-effect-size.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Specyfing the Alternative Hypothesis aka Effect Size.&lt;/h2&gt;
+&lt;div id=&#34;specifying-the-alternative-hypothesis-aka-effect-size.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Specifying the Alternative Hypothesis aka Effect Size.&lt;/h2&gt;
 &lt;p&gt;To conduct a proper power-analysis, it is important that we specify a concrete &lt;em&gt;alternative hypothesis&lt;/em&gt; (or effect size).
-If we do know have a hypothesis about the effect size, we can &lt;em&gt;by definition&lt;/em&gt; not define the power to investigate this hypothesis.
-Makes sense, right?
-In most software packages, you will use effect-size estimates like Cohen’s d or f or other &lt;em&gt;standardized effect sizes&lt;/em&gt;.&lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Here, we will follow a different approach by trying to specify our hypothesis, the expected effect size, on the &lt;em&gt;raw&lt;/em&gt; scale.
-This means we will try to think about an effect size that would be meaningful in this coin flip example.
-For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. &lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;)&lt;a href=&#34;#fn8&#34; class=&#34;footnote-ref&#34; id=&#34;fnref8&#34;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.&lt;/p&gt;
+If we do know have a hypothesis about the effect size, we can &lt;em&gt;by definition&lt;/em&gt; not know the power to investigate this hypothesis.
+Makes sense, right?&lt;/p&gt;
+&lt;p&gt;This means we will try to think about an effect size that would be meaningful in this coin flip example.
+For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. &lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;)&lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Most software packages use effect-size estimates like Cohen’s d or f or other &lt;!-- raw HTML omitted --&gt;standardized effect sizes&lt;!-- raw HTML omitted --&gt;.
+We will have a look at how to do this with simulations briefly in the second part of the tutorial, but throughout this tutorial, we will mostly follow a different approach by trying to specify the expected effect size on the &lt;!-- raw HTML omitted --&gt;raw&lt;!-- raw HTML omitted --&gt; scale.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;a href=&#34;#fn8&#34; class=&#34;footnote-ref&#34; id=&#34;fnref8&#34;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;specifying-the-alpha-level&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Specifying the alpha-level&lt;/h2&gt;
-&lt;p&gt;Furthermore, as it does not deem you a good idea to get into a fight with Harvey by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)&lt;a href=&#34;#fn9&#34; class=&#34;footnote-ref&#34; id=&#34;fnref9&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Furthermore, as it does not deem you a good idea to get into a fight with Harvey (&lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;) by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)&lt;a href=&#34;#fn9&#34; class=&#34;footnote-ref&#34; id=&#34;fnref9&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;specyfing-the-desired-power&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Specyfing the desired power&lt;/h2&gt;
+&lt;div id=&#34;specifying-the-desired-power&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Specifying the desired power&lt;/h2&gt;
 &lt;p&gt;Moreover, you also want to be sure that you &lt;em&gt;would&lt;/em&gt; detect the unfairness of 55% if it is actually there.
 Let’s say you only want to have a 10 percent chance of not detecting it if it was there.
 100 minus this chance is the &lt;em&gt;power&lt;/em&gt; of our coin-toss study, i.e. 90 percent (or 1-.10 on the probability scale).&lt;/p&gt;
@@ -208,7 +292,7 @@ Let’s say you only want to have a 10 percent chance of not detecting it if it 
 &lt;figure&gt;
 &lt;img src=&#34;https://media1.tenor.com/images/507d58a626fa15cb0b57e57f7a1cb873/tenor.gif?itemid=9698651&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
-&lt;em&gt;Figure 3. An illustrative example of when a coin-toss really matters.&lt;/em&gt;&lt;a href=&#34;#Figure-3-Ref&#34;&gt;↩&lt;/a&gt;
+&lt;em&gt;Figure 3. An illustrative example of when a coin-toss really matters.&lt;/em&gt;&lt;a href=&#34;#Figure-3-Ref&#34;&gt;↩︎&lt;/a&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;/a&gt;&lt;/p&gt;
@@ -260,13 +344,13 @@ Figure 4 shows the increase in power with increasing sample-size.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss-1),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 4. Change in power until we reach 90% indicated by the red horizontal line.&lt;/em&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Thus, when tossing a coin 1908 times, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.&lt;/p&gt;
+&lt;p&gt;Thus, when tossing a coin 1908 times&lt;a href=&#34;#fn10&#34; class=&#34;footnote-ref&#34; id=&#34;fnref10&#34;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&#34;https://i.redd.it/wyklemmf5zz11.png&#34; alt=&#34;confronting-harvey&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
@@ -285,12 +369,12 @@ axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;finally-an-actual-power-simulation.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Finally, an actual power simulation.&lt;/h1&gt;
-&lt;p&gt;So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function&lt;a href=&#34;#fn10&#34; class=&#34;footnote-ref&#34; id=&#34;fnref10&#34;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;.
+&lt;p&gt;So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function&lt;a href=&#34;#fn11&#34; class=&#34;footnote-ref&#34; id=&#34;fnref11&#34;&gt;&lt;sup&gt;11&lt;/sup&gt;&lt;/a&gt;.
 Thus, for easy toy-examples like this one we would not need to do a simulation.
 However, as soon as we deal with real examples, it is much more difficult to make use of this approach and if we have several predictors in our model, or if we deal with mixed-effect models or hierarchical models (as we will do in part IV of this tutorial) the above method is not feasible anymore.&lt;/p&gt;
 &lt;p&gt;What we can do however, for any model of any complexity and form, is to actually pretend we were repeatedly doing the experiment for each sample size and see how often we would be able to reject the null-hypothesis.
 For instance we could toss a coin 20 times and test whether we would reject the null-hypothesis.
-We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false&lt;a href=&#34;#fn11&#34; class=&#34;footnote-ref&#34; id=&#34;fnref11&#34;&gt;&lt;sup&gt;11&lt;/sup&gt;&lt;/a&gt;.
+We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false&lt;a href=&#34;#fn12&#34; class=&#34;footnote-ref&#34; id=&#34;fnref12&#34;&gt;&lt;sup&gt;12&lt;/sup&gt;&lt;/a&gt;.
 This is what we do in power-simulation.&lt;/p&gt;
 &lt;p&gt;An obvious disadvantage is that instead of just calculating the power for each toss-amount (i.e. sample-size) only once, we need to try each toss-amount out 1,000 times.
 Thus, simulation takes much longer than a regular power-calculation, especially with more complex models and high sample-sizes.
@@ -316,7 +400,7 @@ n_heads &amp;lt;- rbinom(n = 1000, size = 20, prob = .55) # run 1,000 experiment
 str(n_heads) # show structure of vector&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  int [1:1000] 12 12 11 8 13 8 7 10 10 14 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, &lt;code&gt;R&lt;/code&gt; repeated the 20 coin-toss experiment 1,000 times with an unfair coin of 55% chance of resulting in heads giving us 1,000 times the amount of heads that it got.
-Let us again now test how big our power was in this case if we made the same assumptions of above, i.e. 90% power with an alpha-level of .001.&lt;/p&gt;
+Let us again now test how big our power was in this case, again with an alpha-level of .001.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_heads &amp;lt;- pbinom(n_heads, 20, .50, lower.tail = F) # calculate the probability of observing this many heads if the coin would be fair (which it is not cause we simulated with 55% heads)
 
 exp_power &amp;lt;- mean(p_heads &amp;lt; .001) # check where this chance drops below our alpha level&lt;/code&gt;&lt;/pre&gt;
@@ -331,7 +415,7 @@ To understand what it does, let us have a look at the vector p_heads it looks th
 &lt;p&gt;As shown above, the &lt;code&gt;p_heads&lt;/code&gt; vector contains the probability of observing each amount of heads &lt;code&gt;n_heads&lt;/code&gt; from our 1,000 experiments assuming the experiment was done with a fair coin (which it was not).
 Now we would like to check how many of these probabilities are at least as small as our alpha-level, i.e. surprising enough to conclude the coin was not fair.
 We do this by checking for each value whether it was .001 or smaller (&lt;code&gt;p_heads &amp;lt; .001&lt;/code&gt;).
-This will result in another vector of 0 when the condition is false and 1 when the condition is true&lt;a href=&#34;#fn12&#34; class=&#34;footnote-ref&#34; id=&#34;fnref12&#34;&gt;&lt;sup&gt;12&lt;/sup&gt;&lt;/a&gt;.
+This will result in another vector of 0 when the condition is false and 1 when the condition is true&lt;a href=&#34;#fn13&#34; class=&#34;footnote-ref&#34; id=&#34;fnref13&#34;&gt;&lt;sup&gt;13&lt;/sup&gt;&lt;/a&gt;.
 Taking the mean of this vector will give us the probability of rejecting the null-hypothesis while we actually know it is incorrect (as we put the bias in the coin ourselves).
 Again, this will give us the power.
 In the present case with 20 coin-tosses the power is &lt;code&gt;exp_power&lt;/code&gt; = 0.004 or 0.4 percent.
@@ -359,7 +443,7 @@ We can also plot all these values again as done in Figure 6.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 6. Observed power in the simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -398,7 +482,7 @@ If we look at Figure 7, we also see that now the power-increase follows a more s
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 7. Power curve for a more precise simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -429,17 +513,17 @@ This is the power of our test.&lt;/li&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The answer to the question - &lt;em&gt;Should we be surprised&lt;/em&gt; - is basically what we get when we do a statistical test and inspect the p-value.
 Ok, this is not exactly true but p-values &lt;em&gt;can&lt;/em&gt; actually be expressed in terms of how surprised we should be about an observation, given a certain hypothesis (e.g. when we assume no difference between groups as the null-hypothesis).
-To read an awesome explanation about this, look at &lt;a href=&#34;https://lesslikely.com/statistics/s-values/&#34;&gt;this&lt;/a&gt; really cool blog-post about &lt;em&gt;s-values&lt;/em&gt; by &lt;a href=&#34;https://twitter.com/dailyzad&#34;&gt;Zad Chow&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+To read an awesome explanation about this, look at &lt;a href=&#34;https://lesslikely.com/statistics/s-values/&#34;&gt;this&lt;/a&gt; really cool blog-post about &lt;em&gt;s-values&lt;/em&gt; by &lt;a href=&#34;https://twitter.com/dailyzad&#34;&gt;Zad Chow&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Why is the order important here?
 Because orders do identify unique outcomes.
 If we do not consider entire sequences, we might be inclined to think that there are only four possibilities: 3xHEADS, 2xHEADS, 1xHEADS and 0xHEADS, and that each of these events is equally likely.
-However, how likely eah of these events is depends on how many different sequences can produce it.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+However, how likely each of these events is depends on how many different sequences can produce it.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I looked it up and apparently this number (a one followed by 30 zeros) is called a &lt;em&gt;Nonillion&lt;/em&gt;. It is so big, that apparently the number of bacterial cells on earth is estimated at &lt;a href=&#34;https://www.pnas.org/content/95/12/6578&#34;&gt;5 Nonillion&lt;/a&gt;.
-So I do not recommend trying to write down all possibilities…&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; excludes the first number here, so that is why we start at 54 rather than 55&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+So I do not recommend trying to write down all possibilities…&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; excludes the first number here, so that is why we start at 54 rather than 55&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Notice however, that this alpha-level of .05 implies that we are surprised enough if something only happens in 1 out of 20 cases.
 There have, however, been repeated calls to &lt;a href=&#34;https://www.nature.com/articles/s41562%20017%200189%20z&#34;&gt;change the standard alpha-level&lt;/a&gt;, to &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0311-x&#34;&gt;justify it based on the specific situation you are in&lt;/a&gt; or to &lt;a href=&#34;https://arxiv.org/abs/1709.07588&#34;&gt;abandon it all together&lt;/a&gt; alongside other ideas of using alternatives like the &lt;a href=&#34;https://link.springer.com/article/10.3758/s13423-011-0088-7&#34;&gt;Bayes-Factor&lt;/a&gt;.
-For the most part, in this tutorial I will try to justify the alpha that I choose and to stay away from the “magical” .05 as I agree with the justification approach in that we should at least &lt;em&gt;try&lt;/em&gt; and think harder about the alpha-level and it’s meaning.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+For the most part, in this tutorial I will try to justify the alpha that I choose and to stay away from the “magical” .05 as I agree with the justification approach in that we should at least &lt;em&gt;try&lt;/em&gt; and think harder about the alpha-level and it’s meaning.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;It might be confusing that i say “specify” a null-hypothesis here.
 Is the null-hypothesis not by definition that there is no difference, i.e. that the coin is fair at 50%.
 Well, yes and no.
@@ -447,492 +531,19 @@ Of course assuming coin-fairness is the most logical thing to do here but in rea
 If you keep increasing the sample size, at some point the effect will always be significant, no matter how small the deviation is.
 This is, we could even find the unfairness of the coin if it is only 51%.
 But is this 51% really big enough to care about?
-Maybe, maybe not, but we can define a &lt;em&gt;smallest effect size of interest&lt;/em&gt; and use &lt;em&gt;Equivalance testing&lt;/em&gt; in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
+Maybe, maybe not, but we can define a &lt;em&gt;smallest effect size of interest&lt;/em&gt; and use &lt;em&gt;Equivalence testing&lt;/em&gt; in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
 Equivalence testing is not new but surprisingly unknown and/or uncommon in the psychological literature.
-If you are interested in Equivalence Testing, you should check out the great &lt;a href=&#34;https://journals.sagepub.com/doi/10.1177/2515245918770963&#34;&gt;paper(s)&lt;/a&gt; and &lt;a href=&#34;http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html&#34;&gt;blog-post(s)&lt;/a&gt; about it by &lt;a href=&#34;http://daniellakens.blogspot.com/&#34;&gt;Daniel Lakens&lt;/a&gt; and colleagues.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;Software like G*Power often uses different standardized effect sizes for different anaylses.
+If you are interested in Equivalence Testing, you should check out the great &lt;a href=&#34;https://journals.sagepub.com/doi/10.1177/2515245918770963&#34;&gt;paper(s)&lt;/a&gt; and &lt;a href=&#34;http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html&#34;&gt;blog-post(s)&lt;/a&gt; about it by &lt;a href=&#34;http://daniellakens.blogspot.com/&#34;&gt;Daniel Lakens&lt;/a&gt; and colleagues.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;For those unfamiliar with this reference: Consider watching Dark Knight, it’s a great movie. In short, the displayed character, Harvey Dent, a former state lawyer, falls from grace and and loses his faith in the law system. He takes the law into his own hands and decides whether people will be sentenced (i.e. killed) by tossing a coin.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn8&#34;&gt;&lt;p&gt;Software like G*Power often uses different standardized effect sizes for different analyses.
 However, in many cases standardized effect-sizes can be converted into each other.
-If you ever need to do such a thing, &lt;a href=&#34;http://hauselin.com&#34;&gt;Hause Lin&lt;/a&gt; made a nice &lt;a href=&#34;http://escal.site/&#34;&gt;conversion app&lt;/a&gt;.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn8&#34;&gt;&lt;p&gt;For those unfamiliar with this reference: First, consider watching Dark Knight, it’s a great movie. Second, this character (Harvey Dent, a former state lawyer) decides whether or not to sentence (kill) people by tossing a coin.&lt;a href=&#34;#fnref8&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn9&#34;&gt;&lt;p&gt;Thereby justifying our alpha-level in this toy example.&lt;a href=&#34;#fnref9&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn10&#34;&gt;&lt;p&gt;You can see that is it not a simulation as you will always get the &lt;em&gt;exact same&lt;/em&gt; result whenever you run the code above.&lt;a href=&#34;#fnref10&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn11&#34;&gt;&lt;p&gt;In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
-If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.&lt;a href=&#34;#fnref11&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn12&#34;&gt;&lt;p&gt;Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangable, allowing us to calculate the mean in the same way.&lt;a href=&#34;#fnref12&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Power Analysis by Data Simulation in R - Part II</title>
-      <link>/post/power-analysis-by-data-simulation-in-r-part-ii/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/power-analysis-by-data-simulation-in-r-part-ii/</guid>
-      <description>
-
-
-&lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34; /&gt;
-&lt;/html&gt;
-&lt;style type=&#34;text/css&#34;&gt;
-button.btn.collapsed:before
-{
-    content:&#39;+&#39; ;
-    display:block;
-    width:15px;
-}
-button.btn:before
-{
-    content:&#39;-&#39; ;
-    display:block;
-    width:15px;
-}
-&lt;/style&gt;
-&lt;div id=&#34;the-power-analysis-by-simulation-in-r-for-really-any-design---part-ii&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;The Power Analysis by simulation in &lt;code&gt;R&lt;/code&gt; for really any design - Part II&lt;/h1&gt;
-&lt;p&gt;This is Part II of my tutorial on how to do power-analysis by simulation.
-In Part I, we saw how to do a simulation for a simple toy-example with a coin-toss.
-In this part, we will use a more realistic problem that we might encounter in our daily research life and see how to simulate the power for these designs.
-By looking at how we to power-simulation for the independent-samples t-test and the paired t-test we will learn how to simulate normal-distributions, how to specify their effect-sizes, in terms of &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; and raw effect-sizes. Moreover, we simulate correlated (i.e. multivariate) normal distributions in cases where we have correlated observations (e.g. paired-sample t-test).&lt;/p&gt;
-&lt;p&gt;In part III of this tutorial we will learn how we can conceptualize basically &lt;em&gt;any&lt;/em&gt; design as a linear model and thereby be very flexible in our power analysis.
-In part IV we will learn how to apply this technique to complicated designs such as linear mixed-effects models and generalized mixed-effects models.&lt;/p&gt;
-&lt;div id=&#34;simulating-a-between-subjects-t-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Simulating a between-subjects t-test&lt;/h2&gt;
-&lt;p&gt;The first thing we will need again in our simulation is one of the implemented simulation functions in R (those that let &lt;code&gt;R&lt;/code&gt; run theoretical experiments for us), but this time it is not &lt;code&gt;rbinom&lt;/code&gt; as we are not working with coin-flips but &lt;code&gt;rnorm&lt;/code&gt; - the simulation function for the normal distribution.
-Let’s have a short look at that function as we will keep working with it throughout the tutorial.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;rnorm(n, mean, sd)&lt;/code&gt; takes three arguments, a sample-size &lt;code&gt;n&lt;/code&gt;, a &lt;code&gt;mean&lt;/code&gt; and a standard-deviation &lt;code&gt;sd&lt;/code&gt;.
-By specifying these values, we can “create” random people (or observations) that are participating in our simulated experiments.
-Imagine, for example that we have an intervention study in which we have a treatment group and a control group.
-We can easily simulate both groups with &lt;code&gt;rnorm&lt;/code&gt;.
-However, what should the means and sds of the groups be?&lt;/p&gt;
-&lt;p&gt;There are two ways we can approach this.&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;We could think about what group means we expect in our given case and what we expect the spread of the groups to be &lt;em&gt;on the measurment scale that we are working with&lt;/em&gt;.
-For example, if we use a 40-point scale for a clinical construct we could think that a group with deficiencies on the thing that we measure would probably score around 10 points and that almost everyone from that group would score lower than 20 points.
-This statement (most people score around 10, almost everyone scores lower than 20 points), could be quantified as normal distribution with a mean of 10 and a standard-deviation of 5. In this case only 2.5% of the values (i.e. the values outside the 95% CI) will be higher than 20.&lt;/li&gt;
-&lt;li&gt;In a new research project, we might not be able or willing to to make these statements.
-In this case, by making some extra assumptions, we can fall back to the approach that we also use in power-calculation software in most cases and define a &lt;em&gt;standardized effect size&lt;/em&gt; that we can use to simulate data rather than defining the group means and standard-deviations directly.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I personally prefer the first approach, as I think that in many cases we know more about what we expect from our data than we think.
-And if we &lt;strong&gt;do not&lt;/strong&gt; know a lot about our data, we might try out different assumptions (i.e. means and sds) for the groups in our simulation to see what power we would get for each of them.
-This way, we can make informed decisions about our sample size that are more nuanced than the one in which we just assume a standardized effect size and see what sample-size it implies and are forced to think harder about our data - something that might seem difficult and annoying at first, but is extremely useful and eduucational.
-Another advantage of specifying the groups directly is that we can do this for any arbitrarily complex design while standardized effect sizes might not be readily available for more complex designs.&lt;/p&gt;
-&lt;p&gt;This said, for the cases where we might really not be willing to specify groups directly, and because it allows me to demonstrate some other interesting points, I will first discuss how we can use standardized effect-sizes in our simulation.
-Later on, we will always specify our groups directly though.&lt;/p&gt;
-&lt;p&gt;If we were using GPower now, we would most likely just fill in a difference between groups in &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; and be done with it.
-We could of course also follow this approach by defining the groups based on the implied &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;.
-For instance, we can just assume that group 1 as &lt;code&gt;rnorm(n, 1,2)&lt;/code&gt;.
-Now, following from the formula for Cohen’s d:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Cohen&amp;#39;s\ d =  \frac{(M_1 - M_2)}{pooled \ sd}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[pooled\ sd =  \sqrt\frac{(sd_1^2+sd_2^2)}{2}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;and adhering to the t-test assumption of equal variances we can fill in the pooled sd formula above as&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[pooled\ sd =  \sqrt\frac{(2^2+2^2)}{2} = 2\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;to get a &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; of .50:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Cohen&amp;#39;s\ d =  \frac{(1 - 0)}{2} = 0.5\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;To get any other value for &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; we can just change the pooled sd value to whatever we want.
-More generally, we want to solve the equation above for the pooled sd after specifying any &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;, e.g.:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[0.5=  \frac{(1 - 0)}{pooled\ sd}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We can solve an equation like that with &lt;code&gt;R&lt;/code&gt;’s somewhat unintuitive &lt;code&gt;solve&lt;/code&gt; function like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;solve(0.5,1) # cohens d of .5&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;solve(0.25,1) # cohens d of .25&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 4&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;solve(2,1) # cohens d of 2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.5&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;giving us three examples of how we would need to specify pooled sd to arrive at a particular &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Thus, if we want to do a t-test with two simulated groups and a cohen’s d of 0.5 we can simulate two groups of a particular sample-size by using the &lt;code&gt;rnorm&lt;/code&gt; function.
-Let’s say we have 30 participants in each group.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1234)
-group1 &amp;lt;- rnorm(30, 1, 2)
-group2 &amp;lt;- rnorm(30, 0, 2)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can visualize the groups that we got in a plot like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(group1, col = &amp;quot;red&amp;quot;, breaks = 10, main = &amp;quot;Histogram of both groups&amp;quot;, xlab = &amp;quot;&amp;quot;)
-hist(group2, add = TRUE, breaks = 10, col= &amp;quot;#0000FF33&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_groups1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;We can already make important observations from this plot&lt;/p&gt;
-&lt;p&gt;We wanted to get normal distributions, but what we got here looks all but normal.
-Why is that? Because we only have 30 people per group and taking only 30 values from the specified normal distributions does not really give us a good approximation of the real distribution.
-This point is important: The sampling variability in such small groups is high and often, if small sample-studies (i.e. underpowered studies) find effects, they are often rather big and the consequence of this sampling variability rather than real differences of groups.
-For example, by looking at the means of our sampled groups &lt;code&gt;mean(group1)&lt;/code&gt; = 0.40715 and &lt;code&gt;mean(group2)&lt;/code&gt; = -1.1032366 we see that the group mean of group 1 is actually closer to the mean that we specified for group 2 (i.e. 0) than to its own mean, while the mean for group 2 is far away from our intended mean.
-Looking at the sds actually shows that they are quite close to what we wanted &lt;code&gt;sd(group1)&lt;/code&gt; = 1.8059661 and &lt;code&gt;sd(group2)&lt;/code&gt; = 1.9179992.
-The &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; that we wanted is also not presented very accurately at &lt;code&gt;(mean(group1)-mean(group2))/(sqrt((sd(group1)^2+sd(group2)^2)/2))&lt;/code&gt; = 0.8108043.
-Again, if we would do this in Gpower, and specify a &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;, we will always work with an &lt;em&gt;exact&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;, in a simulation approach we do not.&lt;/p&gt;
-&lt;p&gt;So let us run a t-test to see whether there is a significant difference here.
-First, we need to decide on an alpha-level again.
-What will we choose?
-Well, to have a good justification we have to elaborate on what the groups actually represent.
-Let us say that the difference between groups is related to an intervention that can elevate depressive symptoms.
-Thus, the control group (group1) did not get the intervention and scores higher on depressive symptoms while the treatment group (group2) is expected to score lower.
-Let us assume that this is the first study that we run and that, if we find anything we will follow it up by more extensive studies anyway. Therefore, we might not want to miss a possible effect by setting a too conservative alpha-level.
-If we find something in this study, we will conduct further studies in which we are more strict about the alpha level.
-Thus, we choose .10 for this first “pilot” study.&lt;/p&gt;
-&lt;p&gt;We can now run a t-test with R’s integrated &lt;code&gt;t.test&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t.test(group1, group2, paired = FALSE, var.equal = TRUE, conf.level = 0.9)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-##  Two Sample t-test
-## 
-## data:  group1 and group2
-## t = 3.1402, df = 58, p-value = 0.002656
-## alternative hypothesis: true difference in means is not equal to 0
-## 90 percent confidence interval:
-##  0.7064042 2.3143690
-## sample estimates:
-## mean of x mean of y 
-##  0.407150 -1.103237&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The t-test shows, that this effect would be significant.
-However, we also got “lucky” and had a larger effect than we intended to have.
-To do a proper power analysis (lets say we first want to see whether 30 people per group are enough) we need to not only simulate each group once, but many many times and see how often we get a significant result at the desired alpha-level&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
-Moreover, we would like to have a power of at least 95%, again reflecting our view that we do not want to miss a possible effect.&lt;/p&gt;
-&lt;p&gt;In normal language these assumptions mean that if there is a difference, we will detect it in 19 out of 20 cases while if there is no difference, we will only be incorrectly claming that there is one in 1 out of 10 cases.&lt;/p&gt;
-&lt;p&gt;We will do this similarly to our simulations in part 1 of this tutorial.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1)
-n_sims &amp;lt;- 1000 # we want 1000 simulations
-p_vals &amp;lt;- c()
-for(i in 1:n_sims){
-  group1 &amp;lt;- rnorm(30,1,2) # simulate group 1
-  group2 &amp;lt;- rnorm(30,0,2) # simulate group 2
-  p_vals[i] &amp;lt;- t.test(group1, group2, paired = FALSE, var.equal = TRUE, conf.level = 0.90)$p.value # run t-test and extract the p-value
-}
-mean(p_vals &amp;lt; .10) # check power (i.e. proportion of p-values that are smaller than alpha-level of .10)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.592&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Aha, so it appears that our power &lt;code&gt;mean(p_vals &amp;lt; .10)&lt;/code&gt; = 0.592 is much lower than the 95% that we desired.
-Thus, we did really get lucky in our example above when we found an effect of our intervention.&lt;/p&gt;
-&lt;p&gt;To actually do a legit power-analysis however, we would like to know how many people we do need for a power of 95 percent.
-Again we can modify the code above to take this into account.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1)
-n_sims &amp;lt;- 1000 # we want 1000 simulations
-p_vals &amp;lt;- c()
-power_at_n &amp;lt;- c(0) # this vector will contain the power for each sample-size (it needs the initial 0 for the while-loop to work)
-cohens_ds &amp;lt;- c()
-cohens_ds_at_n &amp;lt;- c() 
-n &amp;lt;- 30 # sample-size 
-i &amp;lt;- 2
-while(power_at_n[i-1] &amp;lt; .95){
-  for(sim in 1:n_sims){
-    group1 &amp;lt;- rnorm(n,1,2) # simulate group 1
-    group2 &amp;lt;- rnorm(n,0,2) # simulate group 2
-    p_vals[sim] &amp;lt;- t.test(group1, group2, paired = FALSE, var.equal = TRUE, conf.level = 0.9)$p.value # run t-test and extract the p-value
-    cohens_ds[sim] &amp;lt;- abs((mean(group1)-mean(group2))/(sqrt((sd(group1)^2+sd(group2)^2)/2))) # we also save the cohens ds that we observed in each simulation
-  }
-    power_at_n[i] &amp;lt;- mean(p_vals &amp;lt; .10) # check power (i.e. proportion of p-values that are smaller than alpha-level of .10)
-    cohens_ds_at_n[i] &amp;lt;- mean(cohens_ds) # calculate means of cohens ds for each sample-size
-    n &amp;lt;- n+1 # increase sample-size by 1
-    i &amp;lt;- i+1 # increase index of the while-loop by 1 to save power and cohens d to vector
-}
-power_at_n &amp;lt;- power_at_n[-1] # delete first 0 from the vector
-cohens_ds_at_n &amp;lt;- cohens_ds_at_n[-1] # delete first NA from the vector&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The loop stopped at a sample-size of &lt;code&gt;n-1&lt;/code&gt; = 84 participants per group.
-Thus make a conclusion about the effectiveness of our intervention at the specified alpha-level with the desired power we need 168 people in total.&lt;/p&gt;
-&lt;p&gt;To visualize the power we can plot it again, just as in the first part of the tutorial.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(30:(n-1), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
-abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Again, this plot shows us how our power to detect the effect slowly increases if we increase the sample-size until it reaches our desired power.&lt;/p&gt;
-&lt;p&gt;There is another interesting observation to make here.
-In the code above, I also calculate the average &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; for each sample size and the plot below shows how it changes with increasing sample-size.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(30:(n-1), cohens_ds_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0.45,0.55), axes = TRUE)
-abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;It is not super obvious with in this plot and I had to change the scale of the y-axis quite a bit to make it visible, but we can actually see how in the beginning our average &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; deviates slightly more from the desired &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; of .50 than in de end.
-In other words, in the beginning, for small sample-sizes there is more fluctuation than for bigger sample-sizes.
-That is pretty neat, as it seems very desirable that a power-estimation procedure takes into account that for smaller sample-sizes, even if the effect in the population is exactly the same (i.e. we always sample groups with a difference of &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; = .50) it is just less precise.
-This is something that (as far as I know) other power-estimation softwares usually do not take into account.&lt;/p&gt;
-&lt;p&gt;Let’s have a brief summary of what we did so far.
-We just used the formula for &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; to give our groups a certain difference that we are interested in, ran 1000 simulated experiments for each sample-size and calculated the power, just as in the first part of the tutorial.&lt;/p&gt;
-&lt;p&gt;However, I want to mention again that, even though it is convenient to specify the effect-size this way as it saves us from having to specify precise group means and standard-deviations directy and makes the specification more comparable, it is often preferable to specify the parameters on the original scale that we are interested in.
-This is especially the case if we have previous data on a research topic that we can make use of.
-Moreover, for more complex designs with many parameters, standardized effect sizes are often difficult to obtain and we are forced to make our assumptions on the original scale of the data.
-We will see this in later examples.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;simulating-a-within-subject-t-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Simulating a within-subject t-test&lt;/h2&gt;
-&lt;p&gt;Intuitively, it might seem that we can use the exact same approach above for a paired t-test as well.
-However, the problem with this is that in a paired t-test we get 2 data-points from the same individual.
-For example, image we have a group of people that get an intervention and we measure their score before and after the intervention and want to compare them with a paired t-test.
-In this case, the score of the post-measure of a given individual is not completely independent of the score of the pre-measure.
-In other words, somebody who scores very low on the pre-measure will most likely not score very high on the post-measure and vice versa.&lt;/p&gt;
-&lt;p&gt;Thus, there is a &lt;em&gt;correlation&lt;/em&gt; between the pre- and the post-measures in that the pre-measures already tell us a little bit about what we can expect on the post-measure.
-Why does this matter for power simulation, you might wonder.
-It matters as it directly influences our power to detect an effect as we will see when we start simulating this situation.
-For now let’s just keep in mind that it is important.&lt;/p&gt;
-&lt;p&gt;So what do we do in a situation with correlated data as in the pre-post intervention situation?
-There are two ways we can go from here.
-First, we can simulate correlated normal distributions, as already mentioned above.
-However, for the particular case of a paired sample t-test, we can also just make use of the fact that, in the end, we are testing whether the &lt;strong&gt;difference&lt;/strong&gt; between post- and pre-measures is different from 0.
-In this case, the correlation between the pre and the post-measure is implicitely handled when substracting the two measures. This way, we do not need to directly specify it.
-If the correlation is close to one, the standard-deviation of the difference scores will be very small, if it is zero, we will end up with the same situation that we have in the independent-sample t-test.
-Thus, we can just make use of a one-sample in which we test whether the distribution of difference-scores differs from zero as the paired t-test is equivalent to the one-sample t-test on difference scores &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3840331/&#34;&gt;(see Lakens, 2013 for more details on this)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Though the one-sample approach is easier to simulate, I will describe both approaches in the following as the first approach (simulating correlated normal-distributions) is more flexible and we need it for the situations we deal with later.&lt;/p&gt;
-&lt;div id=&#34;using-a-one-sample-t-test-approach&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Using a one-sample t-test approach&lt;/h3&gt;
-&lt;p&gt;When we want to do our power-calculation based on the one-sample t-test approach, we only have to specify a single difference-score distribution.
-We can do this again, based on the &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; formula, this time for a one-sample scenario:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ Cohen&amp;#39;s\ d = \frac{M_{diff} - \mu_0}{SD_{diff}}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In the above formula, to get our values for the simulation we can substitute the &lt;span class=&#34;math inline&#34;&gt;\(\mu_0\)&lt;/span&gt; by 0 (as our null-hypothesis is no difference) and solve the equation in the same way as above by fixing the mean-difference between pre- and post-measure, &lt;span class=&#34;math inline&#34;&gt;\(M_{diff}\)&lt;/span&gt; to 1 and calculating the sd we need for each given &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;, for instance&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ 0.5 = \frac{1}{SD_{diff}}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;putting this into &lt;code&gt;R&lt;/code&gt;s &lt;code&gt;solve&lt;/code&gt; function again, we get a 2 in this case.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;solve(0.5, 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To run our simulation we just need to modify the code above to run a one-sample t-test rather than a two-sample t-test and change the formula for &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1)
-n_sims &amp;lt;- 1000 # we want 1000 simulations
-p_vals &amp;lt;- c()
-power_at_n &amp;lt;- c(0) # this vector will contain the power for each sample-size (it needs the initial 0 for the while-loop to work)
-cohens_ds &amp;lt;- c()
-cohens_ds_at_n &amp;lt;- c() 
-n &amp;lt;- 2 # sample-size 
-i &amp;lt;- 2
-while(power_at_n[i-1] &amp;lt; .95){
-  for(sim in 1:n_sims){
-    difference &amp;lt;- rnorm(n,1,2) # simulate the difference score distribution
-    p_vals[sim] &amp;lt;- t.test(difference, mu = 0, conf.level = 0.90)$p.value # run t-test and extract the p-value
-    cohens_ds[sim] &amp;lt;- mean(difference)/sd(difference) # we also save the cohens ds that we observed in each simulation 
-  }
-    power_at_n[i] &amp;lt;- mean(p_vals &amp;lt; .10) # check power (i.e. proportion of p-values that are smaller than alpha-level of .10)
-    cohens_ds_at_n[i] &amp;lt;- mean(cohens_ds) # calculate means of cohens ds for each sample-size
-    n &amp;lt;- n+1 # increase sample-size by 1
-    i &amp;lt;- i+1 # increase index of the while-loop by 1 to save power and cohens d to vector
-}
-power_at_n &amp;lt;- power_at_n[-1] # delete first 0 from the vector
-cohens_ds_at_n &amp;lt;- cohens_ds_at_n[-1] # delete first NA from the vector&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see that the loop stopped at &lt;code&gt;n&lt;/code&gt; = 43 so the sample size we need is &lt;code&gt;n-1&lt;/code&gt; = 42&lt;/p&gt;
-&lt;p&gt;We can plot the power-curve again&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(2:(n-1), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
-abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;and the &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; values:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(2:(n-1), cohens_ds_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0.0,1.0), axes = TRUE)
-abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;We see again, and this time more dramatically, how our simulated effect size becomes more accurate the bigger our sample gets.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;using-a-correlated-samples-paired-t-test-approach&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Using a correlated-samples paired t-test approach&lt;/h3&gt;
-&lt;div id=&#34;the-relationship-between-sd_diff-and-the-correlation&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;The relationship between &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; and the correlation&lt;/h4&gt;
-&lt;p&gt;In the above example, we respecified a paired t-test as a one-sample t-test on the difference scores.
-However, what we are actually working with is two &lt;em&gt;correlated&lt;/em&gt; distributions of measurements.
-To demonstrate this point, let us have a look at how we would actually calculate the standard deviation of the difference scores (&lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt;) in the above equation for &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;.
-The formula to calculate &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; from the standard deviation of the two measurements (pre and post) and their correlation is:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[SD_{diff} = \sqrt{SD_{pre}^2+SD_{post}^2-2r \times SD_{pre} \times SD_{post}} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;It is not important at this point to understand why this is the case (you can just trust &lt;a href=&#34;http://www.utstat.toronto.edu/~brunner/oldclass/378f16/readings/CohenPower.pdf&#34;&gt;Cohen&lt;/a&gt;) on this) but see how we can, for any given &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; and assuming both groups have, for example, a standard deviation of 2, solve the formula to see what correlation (the &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; in the above formula) it would imply.&lt;/p&gt;
-&lt;p&gt;Imagine, for instance, we assume (like in the independent-samples t-test above) that both measures have a standard-deviation of 2 and that the standard-deviation of the difference scores would also be 2 so that we would have the same situation as in the one-sample t-test example above, where we had a mean-difference of 1 and a difference-score standard-deviation of 2.&lt;/p&gt;
-&lt;p&gt;Filling this in we get&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[2 = \sqrt{2^2+2^2-2r \times 2 \times 2} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Solving this equation for &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, we get&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;span class=&#34;math inline&#34;&gt;\(r = 0.5\)&lt;/span&gt;:&lt;/p&gt;
-&lt;p&gt;Therefore, interestingly the situation in which we use the same groups as above and assume that we would get the same &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; of 2 as we assumed in our one-sample situation would imply that the correlation between the pre- and the post-measure is &lt;span class=&#34;math inline&#34;&gt;\(r = 0.5\)&lt;/span&gt;.
-What does this mean?
-Well, lets see what happens if we assume a correlation of &lt;span class=&#34;math inline&#34;&gt;\(r = .90\)&lt;/span&gt; and see what &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; we get:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[SD_{diff} = \sqrt{2^2+2^2-2 \times 0.90 \times 2 \times 2} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Solving this in &lt;code&gt;R&lt;/code&gt; gives us: &lt;code&gt;sqrt(2^2+2^2-2*0.9*2*2)&lt;/code&gt; = 0.89.
-Thus, if the correlation increases the standard-deviation of the difference-scores becomes smaller.
-If we do the same with a correlation of .10 we get &lt;code&gt;sqrt(2^2+2^2-2*0.1*2*2)&lt;/code&gt; = 2.68.
-Thus, when the correlation decreases the standard-deviation becomes bigger.
-Interestingly, this demonstrates that for the same mean-difference, a high correlation results in a &lt;em&gt;larger&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; as calculated for the difference scores in the one-sample case.
-In other words, as the pre-scores tend to be more similar to the post-scores (i.e. they have a high correlation), the standard-deviation of the difference scores decreases.
-This, in turn, results in higher power to detect an effect.&lt;/p&gt;
-&lt;p&gt;To sum up all of the above, we can either specify a difference-score distribution directly and thereby imply a certain correlation by specifying the &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt;, or we can see what &lt;span class=&#34;math inline&#34;&gt;\(SD_{diff}\)&lt;/span&gt; we get with a certain correlation by using the formula above and use the result for the one-sample simulation.
-However, instead of working with the one-sample t-test, in the next section, we will see how we can directly simulate correlated normal-distributions in &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;simulating-correlated-normal-distributions-and-demystifying-the-multivariate-normal.&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Simulating correlated normal-distributions and demystifying the multivariate normal.&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;The following part is (again) longer than I intended but I feel that it is important to understand how we simulate correlated normal-distributions and what a multivariate normal-distribution is.
-In most cases later on we will deal with some kind of correlated normal distributions (in mixed-models we will always encounter them for example) so I think it helps if we have a look at them now in an easier example, so we have one problem less to worry about later on.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Conveniently, &lt;code&gt;R&lt;/code&gt; provides a way in which we can just easily put our correlation into the simulation directly.
-This is very handy, as it will later allow us to specify groups or measurements and their correlation directly when we do have correlations in the model between variables that we do not want to calculate the difference score of (for instance when we have correlated independent variables in a regression).
-The bad news is that we will have to use some new things in our simulation, that I will explain in a second.&lt;/p&gt;
-&lt;p&gt;Rephrasing the problem of simulating two correlated normal-distributions, we can say that we want to simulate a &lt;em&gt;multivariate normal distribution&lt;/em&gt; or, more specifically in this case, a &lt;em&gt;bivariate normal distribution&lt;/em&gt;.
-I will first show how we can do this, and explain what exactly this multivariate normal distribution means afterwards with a little visual intuiton.
-We can simulate a multivariate normal distribution by using the &lt;code&gt;mvrnorm()&lt;/code&gt; function from the &lt;code&gt;MASS&lt;/code&gt; package but it works slightly different than the simulation functions that we have used so far (&lt;code&gt;rnorm&lt;/code&gt; and &lt;code&gt;rbinom&lt;/code&gt;).
-Lets have a look at how this works (code explained below).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(MASS) # load MASS package&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Loading required package: MASS&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pre_post_means &amp;lt;- c(pre = 0,post = 1) # define means of pre and post in a vector
-pre_sd &amp;lt;- 2 # define sd of pre-measure
-post_sd &amp;lt;- 2 # define sd of post-measure
-correlation &amp;lt;- 0.5 # define their correlation
-
-sigma &amp;lt;- matrix(c(pre_sd^2, pre_sd*post_sd*correlation, pre_sd*post_sd*correlation, post_sd^2), ncol = 2) # define variance-covariance matrix
-
-set.seed(1)
-bivnorm &amp;lt;- data.frame(mvrnorm(10000, pre_post_means, sigma)) # simulate bivariate normal&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The above code samples 10,000 observations from a bivariate normal-distribution, or in terms of our example, it samples 10,000 pre-measures with 10,000 correlated post-measures.
-The first thing that is different from our earlier simulations is the first line of the code &lt;code&gt;pre_post_means &amp;lt;- c(0,1)&lt;/code&gt;.
-Instead of defining our means seperately for each measurement, as we have done earlier in the independent-sample case, we now put the pre- and post-measurement mean that we assume into a vector.
-This is because we will simulate both measurements together in the &lt;code&gt;mvrnorm&lt;/code&gt; function, and therefore both means need to be provided at the same time.&lt;/p&gt;
-&lt;p&gt;Secondly, we define the standard-deviations of both measurements just as we did earlier and also specify a correlation that we would like our data-points to have, in this case 0.5.&lt;/p&gt;
-&lt;p&gt;Now, the line &lt;code&gt;matrix(c(pre_sd^2, pre_sd*post_sd*correlation, pre_sd*post_sd*correlation, post_sd^2), ncol = 2)&lt;/code&gt; does something that we have not done before and it might look quite confusing.
-What we are doing here is specifying the &lt;em&gt;variance-covariance matrix&lt;/em&gt;.
-This is nothing more than a table containing the variances of our pre- and post-measurement (the first and the last entry in the list) and the covariance between the two variables twice - once for each measurement (the middle 2 entries in the list).
-Conceptually you can see this variance-covariance matrix as the standard-deviation of the multivariate normal that &lt;code&gt;mvrnorm&lt;/code&gt; needs instead of the standard-deviation that we put into &lt;code&gt;rnorm&lt;/code&gt; earlier.&lt;/p&gt;
-&lt;p&gt;We can visualize the variance-covariance matrix &lt;code&gt;sigma&lt;/code&gt; to demystify it a bit.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;colnames(sigma) &amp;lt;- c(&amp;quot;pre&amp;quot;, &amp;quot;post&amp;quot;)
-rownames(sigma) &amp;lt;- c(&amp;quot;pre&amp;quot;, &amp;quot;post&amp;quot;)
-sigma&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##      pre post
-## pre    4    2
-## post   2    4&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Thus, this matrix is nothing more than a table containing the variance of each variable (4 in each case) and their covariance (i.e. the correlation of the two multiplied by both standard-deviations (&lt;span class=&#34;math inline&#34;&gt;\(Cov(pre,post) = \rho(pre,post)*sd_{pre}*sd_{post}\)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;In the next line of the code we put this all into &lt;code&gt;mvrnorm&lt;/code&gt; to simulate our bivariate normal distribution and store the results in a data-frame with 2 columns, each containing one measurement point:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(bivnorm)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##          pre       post
-## 1 -0.2807182 -0.8893814
-## 2  1.3746052  0.2615539
-## 3 -0.4119554 -1.4827470
-## 4  3.9486678  2.5775470
-## 5  1.0711637  1.0702847
-## 6 -0.8961042 -0.9460816&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;When we run &lt;code&gt;cor(bivnorm$pre, bivnorm$post)&lt;/code&gt; we see that indeed their correlation is 0.52 and close to what we specified.&lt;/p&gt;
-&lt;p&gt;To see how we can imagine such a bivariate normal distribution, we can visualize it the following way.&lt;/p&gt;
-&lt;p&gt;If we draw a histogram of each measurement individually, it looks like this.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
-hist(bivnorm$pre, main = &amp;quot;pre-measure&amp;quot;)
-hist(bivnorm$post, main = &amp;quot;post-measure&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;However, imagine we would not only look at each histogram seperately but we would combine them into one plot by putting the pre-measure scores of each simulated individual on the x-axis and putting the post-measures on the y-axis like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(bivnorm$pre, bivnorm$post, xlab = &amp;quot;pre-measure&amp;quot;, ylab = &amp;quot;post-measure&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;In the above plot, we can clearly see the correlations between the two measurements that we put in the data.
-More elegantly, we can combine the two histograms in the following way.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bivnorm_kde &amp;lt;- kde2d(bivnorm[,1], bivnorm[,2], n = 50) # calculate kernel density (i.e. the &amp;quot;height of the cone on the z-axis&amp;quot;; not so important to understand here)
-par(mar = c(0, 0, 0, 0)) # tel r not to leave so much space around the plot
-persp(bivnorm_kde, phi = 45, theta = 30, xlab = &amp;quot;pre-measure&amp;quot;, ylab = &amp;quot;post-measure&amp;quot;, zlab = &amp;quot;frequency&amp;quot;) # plot the bivariate normal&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Here, we see clearly how our bivariate normal distribution is nothing more than the 2 normal-distributions of each measurement-point combined into one “cone-shaped” normal distribution that has a certain correlation.&lt;/p&gt;
-&lt;p&gt;The plot below shows how this cone looks with different correlations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm_cors-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice how for higher correlations, the cone becomes more and more narrow and starts looking like a “shark-fin” with a correlation of .90.
-This “narrowring” of the cone is the visualization of why the standard-deviations of the difference scores get more narrow.&lt;/p&gt;
-&lt;p&gt;If we visualize this as a point cloud again the three correlations look like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bivnorm_10 &amp;lt;- as.data.frame(bivnorm_10)
-bivnorm_90 &amp;lt;- as.data.frame(bivnorm_90)
-par(mfrow = c(1,3))
-plot(bivnorm_10$pre, bivnorm_10$post)
-plot(bivnorm$pre, bivnorm$post)
-plot(bivnorm_90$pre, bivnorm_90$post)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/correlation_pointplots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This again, clearly shows the manipulatino between the pre- and post measures.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;power-analysis-with-the-multivariate-normal&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Power-analysis with the multivariate normal&lt;/h4&gt;
-&lt;p&gt;Now that we know what we are doing when using &lt;code&gt;mvrnorm&lt;/code&gt; we can go ahead and to a power-simulation for the example above with a bivariate normal-distribution.
-However, as we are not sure how big our correlation is, we can try 3 different correlations in the code above by placing the simulation in another for-loop and telling it to try different correlations.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mu_pre_post &amp;lt;- c(pre = 0, post = 1)
-sd_pre &amp;lt;- 2
-sd_post &amp;lt;- 2
-correlations &amp;lt;- c(0.1, 0.5, 0.9)
-
-set.seed(1)
-n_sims &amp;lt;- 1000 # we want 1000 simulations
-p_vals &amp;lt;- c()
-# this vector will contain the power for each sample-size (it needs the initial 0 for the while-loop to work)
-cohens_ds &amp;lt;- c()
-
-powers_at_cor &amp;lt;- list()
-cohens_ds_at_cor &amp;lt;- list()
-
-for(icor in 1:length(correlations)){ # do a power-simulation for each specified simulation
-  n &amp;lt;- 2 # sample-size 
-  i &amp;lt;- 2 # index of the while loop for saving things into the right place in the lists
-  power_at_n &amp;lt;- c(0) 
-  cohens_ds_at_n &amp;lt;- c() 
-  sigma &amp;lt;- matrix(c(sd_pre^2, sd_pre*sd_post*correlations[icor], sd_pre*sd_post*correlations[icor], sd_post^2), ncol = 2) #var-covar matrix
-  while(power_at_n[i-1] &amp;lt; .95){
-    for(sim in 1:n_sims){
-      bivnorm &amp;lt;- data.frame(mvrnorm(n, mu_pre_post, sigma)) # simulate the bivariate normal
-      p_vals[sim] &amp;lt;- t.test(bivnorm$pre, bivnorm$post, paired = TRUE, var.equal = TRUE, conf.level = 0.9)$p.value # run t-test and extract the p-value
-      cohens_ds[sim] &amp;lt;- abs((mean(bivnorm$pre)-mean(bivnorm$post))/(sqrt(sd(bivnorm$pre)^2+sd(bivnorm$post)^2-2*cor(bivnorm$pre, bivnorm$post)*sd(bivnorm$pre)*sd(bivnorm$post)))) # we also save the cohens ds that we observed in each simulation
-    }
-    power_at_n[i] &amp;lt;- mean(p_vals &amp;lt; .10) # check power (i.e. proportion of p-values that are smaller than alpha-level of .10)
-    names(power_at_n)[i] &amp;lt;- n
-    cohens_ds_at_n[i] &amp;lt;- mean(cohens_ds) # calculate means of cohens ds for each sample-size
-    names(cohens_ds_at_n)[i] &amp;lt;- n
-    n &amp;lt;- n+1 # increase sample-size by 1
-    i &amp;lt;- i+1 # increase index of the while-loop by 1 to save power and cohens d to vector
-  }
-  power_at_n &amp;lt;- power_at_n[-1] # delete first 0 from the vector
-  cohens_ds_at_n &amp;lt;- cohens_ds_at_n[-1] # delete first NA from the vector
-  powers_at_cor[[icor]] &amp;lt;- power_at_n # store the entire power curve for this correlation in a list
-  cohens_ds_at_cor[[icor]] &amp;lt;- cohens_ds_at_n # do the same for cohens d
-  names(powers_at_cor)[[icor]] &amp;lt;- correlations[icor] # name the power-curve in the list according to the tested correlation
-  names(cohens_ds_at_cor)[[icor]] &amp;lt;- correlations[icor] # same for cohens d
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Again, the above code runs a power-simulation, or more specifically three power-analyses, one for each correlation that we wanted to test.
-Notice how this time we specify &lt;code&gt;paired = TRUE&lt;/code&gt; in the &lt;code&gt;t.test&lt;/code&gt; function, to indicate that we are dealing with non-independent observations.
-Also note that a new part of the code saves the &lt;code&gt;power_at_n&lt;/code&gt; vector to a list called &lt;code&gt;power_at_cor&lt;/code&gt;.
-This list, will have 3 elements, each of them the power curve for one of the correlations.
-We can access each power-curve bei either &lt;code&gt;powers_at_cor[[1]]&lt;/code&gt; to get the first vector in the list (the double square brackets mean first entire vector rather than first number only) or we can use it by indicating its name as &lt;code&gt;powers_at_cor$&lt;/code&gt;0.1` to tell R that we want the power curve for a correlation of .10.&lt;/p&gt;
-&lt;p&gt;We can plot these power-curves next to each other&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,3))
-plot(2:(length(powers_at_cor$`0.1`)+1), powers_at_cor$`0.1`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.1&amp;quot;)
-abline(h = .95, col = &amp;quot;red&amp;quot;)
-plot(2:(length(powers_at_cor$`0.5`)+1), powers_at_cor$`0.5`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.5&amp;quot;)
-abline(h = .95, col = &amp;quot;red&amp;quot;)
-plot(2:(length(powers_at_cor$`0.9`)+1), powers_at_cor$`0.9`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.9&amp;quot;)
-abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/powercurve_corr_t-test-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Here we see how drastically the correlation influences the power in this situation.
-With a high correlation, we need only very few participants to achieve the desired power in the specified case.
-Why is this?
-The reason for this is the decreasing standard-deviation of the difference scores the higher the correlation gets.&lt;/p&gt;
-&lt;p&gt;This is how the effect-sizes look.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,3))
-plot(2:(length(cohens_ds_at_cor$`0.1`)+1), cohens_ds_at_cor$`0.1`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.1&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)
-plot(2:(length(cohens_ds_at_cor$`0.5`)+1), cohens_ds_at_cor$`0.5`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.5&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)
-plot(2:(length(cohens_ds_at_cor$`0.9`)+1), cohens_ds_at_cor$`0.9`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,10), axes = TRUE, main = &amp;quot;correlation = 0.9&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/cohens_d_corr_ttest-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;For .10 the value of the effect-size seems slightly underestimated, for .50 it approaches .50 just as in the two-sample case and for .90 it seems overestimated by quite a bit.
-Did something go wrong?
-Well no, but remember that &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; is calculated by dividing the mean-difference by the standard-deviation of the difference scores and that this standard-deviation becomes smaller and smaller with increasing correlation.
-Therefore, &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; is much bigger in the case with the larger correlation.
-This is also why we seem to have much bigger power - we just work with a larger effect size than we intended.
-We can “correct” our estimate for the correlation to get an estimate more similar to the two-sample case following a suggestion by Cohen in which we multiply the effect-size that we get above by &lt;span class=&#34;math inline&#34;&gt;\(\sqrt{2(1-r)}\)&lt;/span&gt; (again we just trust Cohen here).
-If we do this in the above plot we get the following plot, looking much more in line with the effect-size that we would calculate with the indpendent-sample formula for &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,3))
-plot(2:(length(cohens_ds_at_cor$`0.1`)+1), (cohens_ds_at_cor$`0.1`*sqrt(2*(1-0.1))), xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.1&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)
-plot(2:(length(cohens_ds_at_cor$`0.5`)+1), (cohens_ds_at_cor$`0.5`*sqrt(2*(1-0.5))), xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.5&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)
-plot(2:(length(cohens_ds_at_cor$`0.9`)+1), (cohens_ds_at_cor$`0.9`*sqrt(2*(1-0.9))), xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.9&amp;quot;)
-abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-21-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/cohens_d_corr_ttest_corrected-1.png&#34; width=&#34;120%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summary-our-first-simulations-with-t-tests&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Summary: Our first simulations with t-tests&lt;/h2&gt;
-&lt;p&gt;This was the last bit that I wanted to discuss about simulating t-tests and the end of part II of this tutorial.
-We have now learned how to simulate a t-test by using either &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; as an effect-size estimate or by specifying the groups directly, and, if necessary, tell &lt;code&gt;R&lt;/code&gt; that our two groups, or measurements, are correlated in some way.
-What we learned above is not restricted to doing t-tests however.
-Simulating univariate (i.e. uncorrelated) or multivariate (i.e. correlated) normal-distributions will be what we do most of the time in part III and part IV of the tutorial.
-The only thing that will change for more complicated designs is how we combine the different tools that we learned in this part to achieve our goal.&lt;/p&gt;
-&lt;p&gt;In part III of this tutorial, we will see how we can basically run every analysis as a linear model using the &lt;code&gt;lm&lt;/code&gt; function instead of using the &lt;code&gt;t.test&lt;/code&gt; function for t-tests, the &lt;code&gt;aov&lt;/code&gt; function for ANOVA-designs and so forth.
-By exploring how this works for t-test, anova and regression we will simulate our way through the third part and be flexible enough to simulate &lt;strong&gt;all&lt;/strong&gt; classical research designs that we would, for example, be able to do in GPower before reaching the (probably by many people most awaited) part in which we simulate data for (Bayesian) mixed-effects model situations.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;footnotes&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Footnotes&lt;/h1&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\begin{align}
-&amp;amp;2 = \sqrt{2^2+2^2-2r \times 2 \times 2}  \\
-
-\iff &amp;amp;2 = \sqrt{8-8r} &amp;amp;| ^2\\
-\iff &amp;amp;4 = 8-8r &amp;amp;| -8; \div(-8) \\ 
-\iff &amp;amp;0.5 = r  
-
-\end{align}\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Think back to the possible sequences of coin tosses in part I.
-Instead of possible sequences of coin-tosses, we deal with possible sequences of people-scores here, assuming that they come from the underlying distribution that we specify.
-To get a good approximation of all the possible samples that we could get that still follow the specified distribution, we need to simulate many, many times.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;This is how we solve for r:&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+If you ever need to do such a thing, &lt;a href=&#34;http://hauselin.com&#34;&gt;Hause Lin&lt;/a&gt; made a nice &lt;a href=&#34;http://escal.site/&#34;&gt;conversion app&lt;/a&gt;.&lt;a href=&#34;#fnref8&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn9&#34;&gt;&lt;p&gt;Thereby justifying our alpha-level in this toy example.&lt;a href=&#34;#fnref9&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn10&#34;&gt;&lt;p&gt;This might be a good point to open G*Power (maybe for the last time ever), to see whether you get the same conclusions there (spoiler: you will, and if not, that only shows that software like this is not necessarily easier to use).&lt;a href=&#34;#fnref10&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn11&#34;&gt;&lt;p&gt;You can see that is it not a simulation as you will always get the &lt;em&gt;exact same&lt;/em&gt; result whenever you run the code above.&lt;a href=&#34;#fnref11&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn12&#34;&gt;&lt;p&gt;In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
+If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.&lt;a href=&#34;#fnref12&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn13&#34;&gt;&lt;p&gt;Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangeable, allowing us to calculate the mean in the same way.&lt;a href=&#34;#fnref13&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
