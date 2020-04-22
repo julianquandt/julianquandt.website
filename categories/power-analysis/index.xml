@@ -2,27 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Power Analysis | Julian Quandt</title>
-    <link>/categories/power-analysis/</link>
-      <atom:link href="/categories/power-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.github.io/categories/power-analysis/</link>
+      <atom:link href="https://julianquandt.github.io/categories/power-analysis/index.xml" rel="self" type="application/rss+xml" />
     <description>Power Analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Power Analysis</title>
-      <link>/categories/power-analysis/</link>
+      <link>https://julianquandt.github.io/categories/power-analysis/</link>
     </image>
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part I</title>
-      <link>/post/power-analysis-by-data-simulation-in-r-part-i/</link>
+      <link>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</link>
       <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
+      <guid>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://julianquandt.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation&#34;&gt;Power Analysis by Data Simulation in &lt;code&gt;R&lt;/code&gt; - Part I: Theoretical introduction to simulation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#back-to-power&#34;&gt;Back to Power&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#finally-an-actual-power-simulation.&#34;&gt;Finally, an actual power simulation.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#footnotes&#34;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.github.io/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;div id=&#34;power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Power Analysis by Data Simulation in &lt;code&gt;R&lt;/code&gt; - Part I: Theoretical introduction to simulation&lt;/h1&gt;
@@ -38,14 +47,14 @@ First, they urge the user to familiarize themselves with a new piece of software
 Second, and more importantly, these interfaces promote a statistical way of thinking that often leaves the user confused with what the ever-changing parameters (think of these &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f^2\)&lt;/span&gt; and vague “group-size” and “measurement-point” fields) that need to be filled in mean.
 Moreover, these parameters differ for most designs and give an impression that power-analysis is complicated business better left to statisticians or that it might not be worth the effort.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 1. Me trying to figure out how to use a standard power-analysis software.&lt;/em&gt;
 &lt;/figcaption&gt;
 &lt;figure&gt;
 &lt;p&gt;However, this impression changed dramatically for me, once I changed my ways and started doing power analysis by simulation.
 Moreover, learning how to simulate data can of course not only be of use for power analysis but is a useful skill to in every research project.
-When we simulate data, we can see whether what we &lt;em&gt;think&lt;/em&gt; about the data-generating process will acturally &lt;em&gt;result&lt;/em&gt; in the patterns that we would expect.
+When we simulate data, we can see whether what we &lt;em&gt;think&lt;/em&gt; about the data-generating process will actually &lt;em&gt;result&lt;/em&gt; in the patterns that we would expect.
 In other words, we can do theoretical experiments to see whether if everything goes as we would expect, we would also find the results that we would expect.
 Especially when our analyses become more complex, all the different parts in our model tend to interact and it is easy to get lost.
 By simulating data before conducting an experiment, we will be forced (and able) to specify more precisely how we think a theoretical model or prediction will be reflected in the data.&lt;/p&gt;
@@ -69,7 +78,7 @@ At the end of part IV of this tutorial, you will know how to do your own custom 
 &lt;div id=&#34;power-analysis-by-simulation-a-sustainable-alternative&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Power Analysis by Simulation (a sustainable alternative)&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 2. The proof that there are alternative ways to how we normally get our power.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -158,8 +167,8 @@ These possibilities are (for a fair coin or any coin that cannot produce only he
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Notice that a possilibity is not only defined by the number of heads and tails but also by the order in which they occur&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.
-Now we see that only 1 order of events (Possibility 1) can produce 3 out of 3 heads.
+&lt;p&gt;Notice that a possibility is not only defined by the number of heads and tails but also by the order in which they occur&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. We can also calculate the number of possibilities as &lt;span class=&#34;math inline&#34;&gt;\(2^x\)&lt;/span&gt; where 2 means that we have 2 possible outcomes per toss and &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is the number of tosses. In this case the number of possibilities is therefore &lt;span class=&#34;math inline&#34;&gt;\(2^3 = 8\)&lt;/span&gt;.
+Only 1 of these 8 events (Possibility 1) can produce 3 out of 3 heads.
 If our coin is fair, each of these events should be equally likely and we can see that when flipping a fair coin 3 times, in only 1 out of 8 cases (12.5%) we will get 3 heads (Possibility 1).&lt;/p&gt;
 &lt;p&gt;Do we find this surprising enough to conclude that the coin that we flipped is unfair?
 Maybe, maybe not.
@@ -168,13 +177,21 @@ Imagine we observed 55 heads in 100 flips.
 We could now start writing down all possible outcomes, but that would take some time.
 This time, there are not 8 but &lt;span class=&#34;math inline&#34;&gt;\(2^{100}\)&lt;/span&gt; = 1,267,651,000,000,000,000,000,000,000,000 possible sequences of heads and tails, and we would have to count the ones that produce &lt;em&gt;at least&lt;/em&gt; 55 heads to see how often that would happen if our coin is fair&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;However, luckily we are not the first who are interested in these kind of problems and we can make use of mathematical formulas that other people figured out for us.&lt;/p&gt;
-&lt;p&gt;Now the story gets a bit technical I’m afraid, and gets us back to stats 101 where we might have learned about &lt;em&gt;probability mass function.&lt;/em&gt; In this case we need the &lt;strong&gt;binomial&lt;/strong&gt; probability mass function.
+&lt;p&gt;In this case we need the &lt;strong&gt;binomial&lt;/strong&gt; probability mass function.
 In short, this function defines how often we can get each outcome, assuming a certain chance of getting heads or tails.
-If you are interested in seeing this function and see how we can handcode it in &lt;code&gt;R&lt;/code&gt;, then click below.
+If you are interested in seeing this function and see how we can hand-code it in &lt;code&gt;R&lt;/code&gt;, then click on the info-box below.
 If you do not want to get too much into the technicalities here, you can also just read on.&lt;/p&gt;
 &lt;p&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;details&gt;
-&lt;summary&gt;&lt;strong&gt;CLICK HERE FOR MORE ON BINOMIAL LIKELIHOOD&lt;/strong&gt;&lt;/summary&gt;
+&lt;p&gt;&lt;summary&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;!-- raw HTML omitted --&gt;Click here to extend information about the binomial likelihood function&lt;!-- raw HTML omitted --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/summary&gt;&lt;/p&gt;
+&lt;div class=&#34;notebox&#34;&gt;
 &lt;p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(x)=\frac{N!}{x!(N-x)!}\pi^x(1-\pi)^{N-x} \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;For people who are not used to mathematical formulas, this might already look intimidating. However, all we need to know right now is that this formula gives us the probability of getting x heads &lt;span class=&#34;math inline&#34;&gt;\(P{(x)}\)&lt;/span&gt; (i.e. the number of ways we get x heads divided by N tosses):
@@ -203,13 +220,14 @@ print(probs[1:10])&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we got all the probabilities for each of the amounts of heads that we are interested in.
 By summing them up we get what we need - the probability of getting at least 55 heads in 100 tosses, &lt;code&gt;sum(probs)&lt;/code&gt; = 0.18 or 18 percent.&lt;/p&gt;
 &lt;/p&gt;
+&lt;/div&gt;
 &lt;/details&gt;
 &lt;p&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;p&gt;As mentioned, fortunately, the counting of possibilities is pre-implemented into &lt;code&gt;R&lt;/code&gt;.
 Running &lt;code&gt;pbinom(x = 54, size = 100, prob = .5, lower.tail = FALSE)&lt;/code&gt; (I will explain below) we can get R to calculate the proportion of samples that would result in &lt;em&gt;more than&lt;/em&gt; &lt;code&gt;x&lt;/code&gt; times heads in an experiment of &lt;code&gt;size&lt;/code&gt; 100 (i.e. tossing a coin 100 times).
 Executing this in &lt;code&gt;R&lt;/code&gt; we get 0.18.&lt;/p&gt;
 &lt;p&gt;In short, the &lt;code&gt;pbinom&lt;/code&gt; function gives us the answer to the question &#34;what is proportion of possible toss-sequences that results in more than &lt;code&gt;x = 54&lt;/code&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; heads if we toss a coin &lt;code&gt;size=100&lt;/code&gt; times if our hypothesis is that the coin is fair with a probability of heads of &lt;code&gt;prob = .5&lt;/code&gt;.
-The &lt;code&gt;lower.tail = FALSE&lt;/code&gt; argument tells &lt;code&gt;R&lt;/code&gt; that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or more heads rather than 54 or less).
+The &lt;code&gt;lower.tail = FALSE&lt;/code&gt; argument tells &lt;code&gt;R&lt;/code&gt; that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or &lt;em&gt;more&lt;/em&gt; heads rather than 54 or &lt;em&gt;less&lt;/em&gt;).
 In other words, every 6th out of the &lt;span class=&#34;math inline&#34;&gt;\(2^{100}\)&lt;/span&gt; possible sequences has 55 or more heads.
 Again, this is not really surprising and would probably not make us conclude that a coin is definitely unfair.&lt;/p&gt;
 &lt;p&gt;If, for example, we think that a coin is unfair if the amount of heads (or more heads) has only a probability of .01 or 1 percent, what amount of heads would allow us to draw such a conclusion when tossing a coin 100 times?
@@ -224,7 +242,7 @@ p_heads &amp;lt;- pbinom(q = n_heads, size = 100, prob = .5, lower.tail = F)  # 
 plot(n_heads, p_heads)
 abline(h = .01)
 abline(v = n_heads[p_heads &amp;lt; .01][1])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Using the above we see that the at 62 tosses, i.e. the 9th element of the vector is the first probability that is smaller than .01, in this case 0.006.
 In other words, getting 62 or more heads in 100 tosses would only happen extremely rarely, in 1 out of 62 cases.
 Thus actually getting 62 heads is pretty surprising and if something like that happened we might conclude that a coin is unfair.&lt;/p&gt;
@@ -233,34 +251,40 @@ Thus actually getting 62 heads is pretty surprising and if something like that h
 &lt;/div&gt;
 &lt;div id=&#34;back-to-power&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Back to Power&lt;/h1&gt;
-&lt;p&gt;But what is the &lt;strong&gt;power&lt;/strong&gt; of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?&lt;/p&gt;
-&lt;p&gt;In the example above we already used three concepts from frequentist statistical testing:&lt;/p&gt;
+&lt;p&gt;In this coin-toss example, we run a statistical test about the fairness of the coin.
+But what is the &lt;strong&gt;power&lt;/strong&gt; of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?&lt;/p&gt;
+&lt;p&gt;Actually, we already used three concepts from Frequentist statistical testing:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;strong&gt;null-hypothesis&lt;/strong&gt;: we assumed that the coin is fair&lt;/li&gt;
 &lt;li&gt;The &lt;strong&gt;p-value&lt;/strong&gt; : the probability that we calculated above when checking how likely 62 or more heads are (we got 0.006).&lt;/li&gt;
 &lt;li&gt;The &lt;strong&gt;alpha level&lt;/strong&gt; : (i.e. where people conventionally use .05 in psychological literature&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;) is the threshold that we picked for concluding it would surprise us enough to say that the coin must be unfair, i.e. the probability of .01. In other words, it is the chance that we conclude that a coin is unfair even if it is actually fair (the one percent of cases where 62 or more heads would happen even with a fair coin).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In a proper power analysis, all of these need to be specified in addition to an &lt;em&gt;alternative hypothesis&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In a proper power analysis, all of these need to be specified in addition to an &lt;em&gt;alternative hypothesis&lt;/em&gt;. Let’s give it a try and specify them to run a power-analysis&lt;/p&gt;
 &lt;div id=&#34;specifying-the-null-hypothesis.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Specifying the null-hypothesis.&lt;/h2&gt;
 &lt;p&gt;Again, we will assume that a coin is fair and will produce heads with a probability of .50&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;specyfing-the-alternative-hypothesis-aka-effect-size.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Specyfing the Alternative Hypothesis aka Effect Size.&lt;/h2&gt;
+&lt;div id=&#34;specifying-the-alternative-hypothesis-aka-effect-size.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Specifying the Alternative Hypothesis aka Effect Size.&lt;/h2&gt;
 &lt;p&gt;To conduct a proper power-analysis, it is important that we specify a concrete &lt;em&gt;alternative hypothesis&lt;/em&gt; (or effect size).
-If we do know have a hypothesis about the effect size, we can &lt;em&gt;by definition&lt;/em&gt; not define the power to investigate this hypothesis.
-Makes sense, right?
-In most software packages, you will use effect-size estimates like Cohen’s d or f or other &lt;em&gt;standardized effect sizes&lt;/em&gt;.&lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Here, we will follow a different approach by trying to specify our hypothesis, the expected effect size, on the &lt;em&gt;raw&lt;/em&gt; scale.
-This means we will try to think about an effect size that would be meaningful in this coin flip example.
-For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. &lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;)&lt;a href=&#34;#fn8&#34; class=&#34;footnote-ref&#34; id=&#34;fnref8&#34;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt; you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.&lt;/p&gt;
+If we do know have a hypothesis about the effect size, we can &lt;em&gt;by definition&lt;/em&gt; not know the power to investigate this hypothesis.
+Makes sense, right?&lt;/p&gt;
+&lt;p&gt;This means we will try to think about an effect size that would be meaningful in this coin flip example.
+For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. &lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;)&lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Most software packages use effect-size estimates like Cohen’s d or f or other &lt;!-- raw HTML omitted --&gt;standardized effect sizes&lt;!-- raw HTML omitted --&gt;.
+We will have a look at how to do this with simulations briefly in the second part of the tutorial, but throughout this tutorial, we will mostly follow a different approach by trying to specify the expected effect size on the &lt;!-- raw HTML omitted --&gt;raw&lt;!-- raw HTML omitted --&gt; scale.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;a href=&#34;#fn8&#34; class=&#34;footnote-ref&#34; id=&#34;fnref8&#34;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;specifying-the-alpha-level&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Specifying the alpha-level&lt;/h2&gt;
-&lt;p&gt;Furthermore, as it does not deem you a good idea to get into a fight with Harvey by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)&lt;a href=&#34;#fn9&#34; class=&#34;footnote-ref&#34; id=&#34;fnref9&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Furthermore, as it does not deem you a good idea to get into a fight with Harvey (&lt;a id=&#34;Figure-3-Ref&#34; href=&#34;#Figure-3&#34;&gt;Figure 3&lt;/a&gt;) by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)&lt;a href=&#34;#fn9&#34; class=&#34;footnote-ref&#34; id=&#34;fnref9&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;specyfing-the-desired-power&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Specyfing the desired power&lt;/h2&gt;
+&lt;div id=&#34;specifying-the-desired-power&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Specifying the desired power&lt;/h2&gt;
 &lt;p&gt;Moreover, you also want to be sure that you &lt;em&gt;would&lt;/em&gt; detect the unfairness of 55% if it is actually there.
 Let’s say you only want to have a 10 percent chance of not detecting it if it was there.
 100 minus this chance is the &lt;em&gt;power&lt;/em&gt; of our coin-toss study, i.e. 90 percent (or 1-.10 on the probability scale).&lt;/p&gt;
@@ -320,13 +344,13 @@ Figure 4 shows the increase in power with increasing sample-size.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss-1),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 4. Change in power until we reach 90% indicated by the red horizontal line.&lt;/em&gt;
 &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Thus, when tossing a coin 1908 times, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.&lt;/p&gt;
+&lt;p&gt;Thus, when tossing a coin 1908 times&lt;a href=&#34;#fn10&#34; class=&#34;footnote-ref&#34; id=&#34;fnref10&#34;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&#34;https://i.redd.it/wyklemmf5zz11.png&#34; alt=&#34;confronting-harvey&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
@@ -345,12 +369,12 @@ axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;finally-an-actual-power-simulation.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Finally, an actual power simulation.&lt;/h1&gt;
-&lt;p&gt;So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function&lt;a href=&#34;#fn10&#34; class=&#34;footnote-ref&#34; id=&#34;fnref10&#34;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;.
+&lt;p&gt;So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function&lt;a href=&#34;#fn11&#34; class=&#34;footnote-ref&#34; id=&#34;fnref11&#34;&gt;&lt;sup&gt;11&lt;/sup&gt;&lt;/a&gt;.
 Thus, for easy toy-examples like this one we would not need to do a simulation.
 However, as soon as we deal with real examples, it is much more difficult to make use of this approach and if we have several predictors in our model, or if we deal with mixed-effect models or hierarchical models (as we will do in part IV of this tutorial) the above method is not feasible anymore.&lt;/p&gt;
 &lt;p&gt;What we can do however, for any model of any complexity and form, is to actually pretend we were repeatedly doing the experiment for each sample size and see how often we would be able to reject the null-hypothesis.
 For instance we could toss a coin 20 times and test whether we would reject the null-hypothesis.
-We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false&lt;a href=&#34;#fn11&#34; class=&#34;footnote-ref&#34; id=&#34;fnref11&#34;&gt;&lt;sup&gt;11&lt;/sup&gt;&lt;/a&gt;.
+We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false&lt;a href=&#34;#fn12&#34; class=&#34;footnote-ref&#34; id=&#34;fnref12&#34;&gt;&lt;sup&gt;12&lt;/sup&gt;&lt;/a&gt;.
 This is what we do in power-simulation.&lt;/p&gt;
 &lt;p&gt;An obvious disadvantage is that instead of just calculating the power for each toss-amount (i.e. sample-size) only once, we need to try each toss-amount out 1,000 times.
 Thus, simulation takes much longer than a regular power-calculation, especially with more complex models and high sample-sizes.
@@ -376,7 +400,7 @@ n_heads &amp;lt;- rbinom(n = 1000, size = 20, prob = .55) # run 1,000 experiment
 str(n_heads) # show structure of vector&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  int [1:1000] 12 12 11 8 13 8 7 10 10 14 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, &lt;code&gt;R&lt;/code&gt; repeated the 20 coin-toss experiment 1,000 times with an unfair coin of 55% chance of resulting in heads giving us 1,000 times the amount of heads that it got.
-Let us again now test how big our power was in this case if we made the same assumptions of above, i.e. 90% power with an alpha-level of .001.&lt;/p&gt;
+Let us again now test how big our power was in this case, again with an alpha-level of .001.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_heads &amp;lt;- pbinom(n_heads, 20, .50, lower.tail = F) # calculate the probability of observing this many heads if the coin would be fair (which it is not cause we simulated with 55% heads)
 
 exp_power &amp;lt;- mean(p_heads &amp;lt; .001) # check where this chance drops below our alpha level&lt;/code&gt;&lt;/pre&gt;
@@ -391,7 +415,7 @@ To understand what it does, let us have a look at the vector p_heads it looks th
 &lt;p&gt;As shown above, the &lt;code&gt;p_heads&lt;/code&gt; vector contains the probability of observing each amount of heads &lt;code&gt;n_heads&lt;/code&gt; from our 1,000 experiments assuming the experiment was done with a fair coin (which it was not).
 Now we would like to check how many of these probabilities are at least as small as our alpha-level, i.e. surprising enough to conclude the coin was not fair.
 We do this by checking for each value whether it was .001 or smaller (&lt;code&gt;p_heads &amp;lt; .001&lt;/code&gt;).
-This will result in another vector of 0 when the condition is false and 1 when the condition is true&lt;a href=&#34;#fn12&#34; class=&#34;footnote-ref&#34; id=&#34;fnref12&#34;&gt;&lt;sup&gt;12&lt;/sup&gt;&lt;/a&gt;.
+This will result in another vector of 0 when the condition is false and 1 when the condition is true&lt;a href=&#34;#fn13&#34; class=&#34;footnote-ref&#34; id=&#34;fnref13&#34;&gt;&lt;sup&gt;13&lt;/sup&gt;&lt;/a&gt;.
 Taking the mean of this vector will give us the probability of rejecting the null-hypothesis while we actually know it is incorrect (as we put the bias in the coin ourselves).
 Again, this will give us the power.
 In the present case with 20 coin-tosses the power is &lt;code&gt;exp_power&lt;/code&gt; = 0.004 or 0.4 percent.
@@ -419,7 +443,7 @@ We can also plot all these values again as done in Figure 6.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 6. Observed power in the simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -458,7 +482,7 @@ If we look at Figure 7, we also see that now the power-increase follows a more s
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.github.io/post/2020-01-20-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 7. Power curve for a more precise simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -493,7 +517,7 @@ To read an awesome explanation about this, look at &lt;a href=&#34;https://lessl
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Why is the order important here?
 Because orders do identify unique outcomes.
 If we do not consider entire sequences, we might be inclined to think that there are only four possibilities: 3xHEADS, 2xHEADS, 1xHEADS and 0xHEADS, and that each of these events is equally likely.
-However, how likely eah of these events is depends on how many different sequences can produce it.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+However, how likely each of these events is depends on how many different sequences can produce it.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I looked it up and apparently this number (a one followed by 30 zeros) is called a &lt;em&gt;Nonillion&lt;/em&gt;. It is so big, that apparently the number of bacterial cells on earth is estimated at &lt;a href=&#34;https://www.pnas.org/content/95/12/6578&#34;&gt;5 Nonillion&lt;/a&gt;.
 So I do not recommend trying to write down all possibilities…&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; excludes the first number here, so that is why we start at 54 rather than 55&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -507,18 +531,19 @@ Of course assuming coin-fairness is the most logical thing to do here but in rea
 If you keep increasing the sample size, at some point the effect will always be significant, no matter how small the deviation is.
 This is, we could even find the unfairness of the coin if it is only 51%.
 But is this 51% really big enough to care about?
-Maybe, maybe not, but we can define a &lt;em&gt;smallest effect size of interest&lt;/em&gt; and use &lt;em&gt;Equivalance testing&lt;/em&gt; in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
+Maybe, maybe not, but we can define a &lt;em&gt;smallest effect size of interest&lt;/em&gt; and use &lt;em&gt;Equivalence testing&lt;/em&gt; in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
 Equivalence testing is not new but surprisingly unknown and/or uncommon in the psychological literature.
 If you are interested in Equivalence Testing, you should check out the great &lt;a href=&#34;https://journals.sagepub.com/doi/10.1177/2515245918770963&#34;&gt;paper(s)&lt;/a&gt; and &lt;a href=&#34;http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html&#34;&gt;blog-post(s)&lt;/a&gt; about it by &lt;a href=&#34;http://daniellakens.blogspot.com/&#34;&gt;Daniel Lakens&lt;/a&gt; and colleagues.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;Software like G*Power often uses different standardized effect sizes for different anaylses.
+&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;For those unfamiliar with this reference: Consider watching Dark Knight, it’s a great movie. In short, the displayed character, Harvey Dent, a former state lawyer, falls from grace and and loses his faith in the law system. He takes the law into his own hands and decides whether people will be sentenced (i.e. killed) by tossing a coin.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn8&#34;&gt;&lt;p&gt;Software like G*Power often uses different standardized effect sizes for different analyses.
 However, in many cases standardized effect-sizes can be converted into each other.
-If you ever need to do such a thing, &lt;a href=&#34;http://hauselin.com&#34;&gt;Hause Lin&lt;/a&gt; made a nice &lt;a href=&#34;http://escal.site/&#34;&gt;conversion app&lt;/a&gt;.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn8&#34;&gt;&lt;p&gt;For those unfamiliar with this reference: First, consider watching Dark Knight, it’s a great movie. Second, this character (Harvey Dent, a former state lawyer) decides whether or not to sentence (kill) people by tossing a coin.&lt;a href=&#34;#fnref8&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+If you ever need to do such a thing, &lt;a href=&#34;http://hauselin.com&#34;&gt;Hause Lin&lt;/a&gt; made a nice &lt;a href=&#34;http://escal.site/&#34;&gt;conversion app&lt;/a&gt;.&lt;a href=&#34;#fnref8&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn9&#34;&gt;&lt;p&gt;Thereby justifying our alpha-level in this toy example.&lt;a href=&#34;#fnref9&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn10&#34;&gt;&lt;p&gt;You can see that is it not a simulation as you will always get the &lt;em&gt;exact same&lt;/em&gt; result whenever you run the code above.&lt;a href=&#34;#fnref10&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn11&#34;&gt;&lt;p&gt;In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
-If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.&lt;a href=&#34;#fnref11&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn12&#34;&gt;&lt;p&gt;Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangable, allowing us to calculate the mean in the same way.&lt;a href=&#34;#fnref12&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn10&#34;&gt;&lt;p&gt;This might be a good point to open G*Power (maybe for the last time ever), to see whether you get the same conclusions there (spoiler: you will, and if not, that only shows that software like this is not necessarily easier to use).&lt;a href=&#34;#fnref10&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn11&#34;&gt;&lt;p&gt;You can see that is it not a simulation as you will always get the &lt;em&gt;exact same&lt;/em&gt; result whenever you run the code above.&lt;a href=&#34;#fnref11&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn12&#34;&gt;&lt;p&gt;In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
+If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.&lt;a href=&#34;#fnref12&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn13&#34;&gt;&lt;p&gt;Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangeable, allowing us to calculate the mean in the same way.&lt;a href=&#34;#fnref13&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

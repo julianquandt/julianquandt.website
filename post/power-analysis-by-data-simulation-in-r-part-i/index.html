@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example.">
+  <meta name="description" content="This part provides an introduction, some background on power-calculation and data-simulation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="alternate" hreflang="en-us" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
 
@@ -216,7 +216,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="canonical" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
   
@@ -230,15 +230,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Julian Quandt">
-  <meta property="og:url" content="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <meta property="og:url" content="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
   <meta property="og:title" content="Power Analysis by Data Simulation in R - Part I | Julian Quandt">
-  <meta property="og:description" content="This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="This part provides an introduction, some background on power-calculation and data-simulation."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-01-16T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-04-15T17:31:42&#43;00:00">
+    <meta property="article:modified_time" content="2020-04-16T13:05:40&#43;00:00">
   
 
   
@@ -264,12 +264,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/power-analysis-by-data-simulation-in-r-part-i/"
+    "@id": "https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/"
   },
   "headline": "Power Analysis by Data Simulation in R - Part I",
   
   "datePublished": "2020-01-16T00:00:00Z",
-  "dateModified": "2020-04-15T17:31:42Z",
+  "dateModified": "2020-04-16T13:05:40Z",
   
   "author": {
     "@type": "Person",
@@ -281,10 +281,10 @@
     "name": "Julian Quandt",
     "logo": {
       "@type": "ImageObject",
-      "url": "img//"
+      "url": "img/https://julianquandt.github.io/"
     }
   },
-  "description": "This part provides an introduction, some background on power-calculation and data-simulation with a coin-toss example."
+  "description": "This part provides an introduction, some background on power-calculation and data-simulation."
 }
 </script>
 
@@ -565,7 +565,7 @@
           Last updated on
       
     
-    Apr 15, 2020
+    Apr 16, 2020
   </span>
   
 
@@ -654,6 +654,15 @@
       
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
+<div id="TOC">
+<ul>
+<li><a href="#power-analysis-by-data-simulation-in-r---part-i-theoretical-introduction-to-simulation">Power Analysis by Data Simulation in <code>R</code> - Part I: Theoretical introduction to simulation</a></li>
+<li><a href="#back-to-power">Back to Power</a></li>
+<li><a href="#finally-an-actual-power-simulation.">Finally, an actual power simulation.</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+</ul>
+</div>
 
 <html>
 <link rel="stylesheet" href="/css/style.css" />
@@ -679,7 +688,7 @@ Moreover, these parameters differ for most designs and give an impression that p
 <figure>
 <p>However, this impression changed dramatically for me, once I changed my ways and started doing power analysis by simulation.
 Moreover, learning how to simulate data can of course not only be of use for power analysis but is a useful skill to in every research project.
-When we simulate data, we can see whether what we <em>think</em> about the data-generating process will acturally <em>result</em> in the patterns that we would expect.
+When we simulate data, we can see whether what we <em>think</em> about the data-generating process will actually <em>result</em> in the patterns that we would expect.
 In other words, we can do theoretical experiments to see whether if everything goes as we would expect, we would also find the results that we would expect.
 Especially when our analyses become more complex, all the different parts in our model tend to interact and it is easy to get lost.
 By simulating data before conducting an experiment, we will be forced (and able) to specify more precisely how we think a theoretical model or prediction will be reflected in the data.</p>
@@ -792,8 +801,8 @@ These possibilities are (for a fair coin or any coin that cannot produce only he
 </tr>
 </tbody>
 </table>
-<p>Notice that a possilibity is not only defined by the number of heads and tails but also by the order in which they occur<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.
-Now we see that only 1 order of events (Possibility 1) can produce 3 out of 3 heads.
+<p>Notice that a possibility is not only defined by the number of heads and tails but also by the order in which they occur<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. We can also calculate the number of possibilities as <span class="math inline">\(2^x\)</span> where 2 means that we have 2 possible outcomes per toss and <span class="math inline">\(x\)</span> is the number of tosses. In this case the number of possibilities is therefore <span class="math inline">\(2^3 = 8\)</span>.
+Only 1 of these 8 events (Possibility 1) can produce 3 out of 3 heads.
 If our coin is fair, each of these events should be equally likely and we can see that when flipping a fair coin 3 times, in only 1 out of 8 cases (12.5%) we will get 3 heads (Possibility 1).</p>
 <p>Do we find this surprising enough to conclude that the coin that we flipped is unfair?
 Maybe, maybe not.
@@ -802,13 +811,21 @@ Imagine we observed 55 heads in 100 flips.
 We could now start writing down all possible outcomes, but that would take some time.
 This time, there are not 8 but <span class="math inline">\(2^{100}\)</span> = 1,267,651,000,000,000,000,000,000,000,000 possible sequences of heads and tails, and we would have to count the ones that produce <em>at least</em> 55 heads to see how often that would happen if our coin is fair<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
 <p>However, luckily we are not the first who are interested in these kind of problems and we can make use of mathematical formulas that other people figured out for us.</p>
-<p>Now the story gets a bit technical I’m afraid, and gets us back to stats 101 where we might have learned about <em>probability mass function.</em> In this case we need the <strong>binomial</strong> probability mass function.
+<p>In this case we need the <strong>binomial</strong> probability mass function.
 In short, this function defines how often we can get each outcome, assuming a certain chance of getting heads or tails.
-If you are interested in seeing this function and see how we can handcode it in <code>R</code>, then click below.
+If you are interested in seeing this function and see how we can hand-code it in <code>R</code>, then click on the info-box below.
 If you do not want to get too much into the technicalities here, you can also just read on.</p>
 <p></br></p>
 <details>
-<summary><strong>CLICK HERE FOR MORE ON BINOMIAL LIKELIHOOD</strong></summary>
+<p><summary>
+<div class="alert alert-note">
+  <div>
+    <!-- raw HTML omitted -->Click here to extend information about the binomial likelihood function<!-- raw HTML omitted -->
+  </div>
+</div>
+
+</summary></p>
+<div class="notebox">
 <p>
 <p><span class="math display">\[P(x)=\frac{N!}{x!(N-x)!}\pi^x(1-\pi)^{N-x} \]</span></p>
 <p>For people who are not used to mathematical formulas, this might already look intimidating. However, all we need to know right now is that this formula gives us the probability of getting x heads <span class="math inline">\(P{(x)}\)</span> (i.e. the number of ways we get x heads divided by N tosses):
@@ -837,13 +854,14 @@ print(probs[1:10])</code></pre>
 <p>Now we got all the probabilities for each of the amounts of heads that we are interested in.
 By summing them up we get what we need - the probability of getting at least 55 heads in 100 tosses, <code>sum(probs)</code> = 0.18 or 18 percent.</p>
 </p>
+</div>
 </details>
 <p></br></p>
 <p>As mentioned, fortunately, the counting of possibilities is pre-implemented into <code>R</code>.
 Running <code>pbinom(x = 54, size = 100, prob = .5, lower.tail = FALSE)</code> (I will explain below) we can get R to calculate the proportion of samples that would result in <em>more than</em> <code>x</code> times heads in an experiment of <code>size</code> 100 (i.e. tossing a coin 100 times).
 Executing this in <code>R</code> we get 0.18.</p>
 <p>In short, the <code>pbinom</code> function gives us the answer to the question "what is proportion of possible toss-sequences that results in more than <code>x = 54</code><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> heads if we toss a coin <code>size=100</code> times if our hypothesis is that the coin is fair with a probability of heads of <code>prob = .5</code>.
-The <code>lower.tail = FALSE</code> argument tells <code>R</code> that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or more heads rather than 54 or less).
+The <code>lower.tail = FALSE</code> argument tells <code>R</code> that we want the the probability of the upper part of the probability mass (i.e. the probability of getting 55 or <em>more</em> heads rather than 54 or <em>less</em>).
 In other words, every 6th out of the <span class="math inline">\(2^{100}\)</span> possible sequences has 55 or more heads.
 Again, this is not really surprising and would probably not make us conclude that a coin is definitely unfair.</p>
 <p>If, for example, we think that a coin is unfair if the amount of heads (or more heads) has only a probability of .01 or 1 percent, what amount of heads would allow us to draw such a conclusion when tossing a coin 100 times?
@@ -867,34 +885,40 @@ Thus actually getting 62 heads is pretty surprising and if something like that h
 </div>
 <div id="back-to-power" class="section level1">
 <h1>Back to Power</h1>
-<p>But what is the <strong>power</strong> of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?</p>
-<p>In the example above we already used three concepts from frequentist statistical testing:</p>
+<p>In this coin-toss example, we run a statistical test about the fairness of the coin.
+But what is the <strong>power</strong> of the test here (in case you forgot during my very long “brief” introduction, this post was about power)?</p>
+<p>Actually, we already used three concepts from Frequentist statistical testing:</p>
 <ul>
 <li>The <strong>null-hypothesis</strong>: we assumed that the coin is fair</li>
 <li>The <strong>p-value</strong> : the probability that we calculated above when checking how likely 62 or more heads are (we got 0.006).</li>
 <li>The <strong>alpha level</strong> : (i.e. where people conventionally use .05 in psychological literature<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>) is the threshold that we picked for concluding it would surprise us enough to say that the coin must be unfair, i.e. the probability of .01. In other words, it is the chance that we conclude that a coin is unfair even if it is actually fair (the one percent of cases where 62 or more heads would happen even with a fair coin).</li>
 </ul>
-<p>In a proper power analysis, all of these need to be specified in addition to an <em>alternative hypothesis</em>.</p>
+<p>In a proper power analysis, all of these need to be specified in addition to an <em>alternative hypothesis</em>. Let’s give it a try and specify them to run a power-analysis</p>
 <div id="specifying-the-null-hypothesis." class="section level2">
 <h2>Specifying the null-hypothesis.</h2>
 <p>Again, we will assume that a coin is fair and will produce heads with a probability of .50<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.</p>
 </div>
-<div id="specyfing-the-alternative-hypothesis-aka-effect-size." class="section level2">
-<h2>Specyfing the Alternative Hypothesis aka Effect Size.</h2>
+<div id="specifying-the-alternative-hypothesis-aka-effect-size." class="section level2">
+<h2>Specifying the Alternative Hypothesis aka Effect Size.</h2>
 <p>To conduct a proper power-analysis, it is important that we specify a concrete <em>alternative hypothesis</em> (or effect size).
-If we do know have a hypothesis about the effect size, we can <em>by definition</em> not define the power to investigate this hypothesis.
-Makes sense, right?
-In most software packages, you will use effect-size estimates like Cohen’s d or f or other <em>standardized effect sizes</em>.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
-<p>Here, we will follow a different approach by trying to specify our hypothesis, the expected effect size, on the <em>raw</em> scale.
-This means we will try to think about an effect size that would be meaningful in this coin flip example.
-For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. <a id="Figure-3-Ref" href="#Figure-3">Figure 3</a>)<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.</p>
+If we do know have a hypothesis about the effect size, we can <em>by definition</em> not know the power to investigate this hypothesis.
+Makes sense, right?</p>
+<p>This means we will try to think about an effect size that would be meaningful in this coin flip example.
+For instance, if you use the coin to make an important decision, i.e. when the fairness of the coin is very important (see e.g. <a id="Figure-3-Ref" href="#Figure-3">Figure 3</a>)<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> you would probably want to be very strict about when a coin is unfair and would like to, for instance, already conclude that it is unfair at 55% percent heads, a deviation from a truly fair coin of 5%.</p>
+<p><div class="alert alert-note">
+  <div>
+    Most software packages use effect-size estimates like Cohen’s d or f or other <!-- raw HTML omitted -->standardized effect sizes<!-- raw HTML omitted -->.
+We will have a look at how to do this with simulations briefly in the second part of the tutorial, but throughout this tutorial, we will mostly follow a different approach by trying to specify the expected effect size on the <!-- raw HTML omitted -->raw<!-- raw HTML omitted --> scale.
+  </div>
+</div>
+<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
 </div>
 <div id="specifying-the-alpha-level" class="section level2">
 <h2>Specifying the alpha-level</h2>
-<p>Furthermore, as it does not deem you a good idea to get into a fight with Harvey by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
+<p>Furthermore, as it does not deem you a good idea to get into a fight with Harvey (<a id="Figure-3-Ref" href="#Figure-3">Figure 3</a>) by incorrectly accusing him of using an unfair coin, you want the chance of this happening (i.e. the alpha-level) to be very low at only 0.1 percent (1 in a 1000 cases)<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>.</p>
 </div>
-<div id="specyfing-the-desired-power" class="section level2">
-<h2>Specyfing the desired power</h2>
+<div id="specifying-the-desired-power" class="section level2">
+<h2>Specifying the desired power</h2>
 <p>Moreover, you also want to be sure that you <em>would</em> detect the unfairness of 55% if it is actually there.
 Let’s say you only want to have a 10 percent chance of not detecting it if it was there.
 100 minus this chance is the <em>power</em> of our coin-toss study, i.e. 90 percent (or 1-.10 on the probability scale).</p>
@@ -960,7 +984,7 @@ axis(side = 2, at = seq(0,1,by=0.1))</code></pre>
 </figcaption>
 </figure>
 <p></a></p>
-<p>Thus, when tossing a coin 1908 times, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.</p>
+<p>Thus, when tossing a coin 1908 times<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>, in 90% of the cases we will be able to tell it’s biased and can confidently confront Harvey like shown in Figure 5.</p>
 <figure>
 <img src="https://i.redd.it/wyklemmf5zz11.png" alt="confronting-harvey" width="500"/>
 <figcaption>
@@ -979,12 +1003,12 @@ axis(side = 2, at = seq(0,1,by=0.1))</code></pre>
 </div>
 <div id="finally-an-actual-power-simulation." class="section level1">
 <h1>Finally, an actual power simulation.</h1>
-<p>So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>.
+<p>So far, we have not done any simulation but have merely analytically derived the power by making use of the binomial probability mass function<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>.
 Thus, for easy toy-examples like this one we would not need to do a simulation.
 However, as soon as we deal with real examples, it is much more difficult to make use of this approach and if we have several predictors in our model, or if we deal with mixed-effect models or hierarchical models (as we will do in part IV of this tutorial) the above method is not feasible anymore.</p>
 <p>What we can do however, for any model of any complexity and form, is to actually pretend we were repeatedly doing the experiment for each sample size and see how often we would be able to reject the null-hypothesis.
 For instance we could toss a coin 20 times and test whether we would reject the null-hypothesis.
-We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>.
+We could then repeat this process for 20 tosses very often, e.g. 1,000 times and see what the probability is that we would conclude that the null-hypothesis is false<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>.
 This is what we do in power-simulation.</p>
 <p>An obvious disadvantage is that instead of just calculating the power for each toss-amount (i.e. sample-size) only once, we need to try each toss-amount out 1,000 times.
 Thus, simulation takes much longer than a regular power-calculation, especially with more complex models and high sample-sizes.
@@ -1010,7 +1034,7 @@ n_heads &lt;- rbinom(n = 1000, size = 20, prob = .55) # run 1,000 experiments, o
 str(n_heads) # show structure of vector</code></pre>
 <pre><code>##  int [1:1000] 12 12 11 8 13 8 7 10 10 14 ...</code></pre>
 <p>Now, <code>R</code> repeated the 20 coin-toss experiment 1,000 times with an unfair coin of 55% chance of resulting in heads giving us 1,000 times the amount of heads that it got.
-Let us again now test how big our power was in this case if we made the same assumptions of above, i.e. 90% power with an alpha-level of .001.</p>
+Let us again now test how big our power was in this case, again with an alpha-level of .001.</p>
 <pre class="r"><code>p_heads &lt;- pbinom(n_heads, 20, .50, lower.tail = F) # calculate the probability of observing this many heads if the coin would be fair (which it is not cause we simulated with 55% heads)
 
 exp_power &lt;- mean(p_heads &lt; .001) # check where this chance drops below our alpha level</code></pre>
@@ -1025,7 +1049,7 @@ To understand what it does, let us have a look at the vector p_heads it looks th
 <p>As shown above, the <code>p_heads</code> vector contains the probability of observing each amount of heads <code>n_heads</code> from our 1,000 experiments assuming the experiment was done with a fair coin (which it was not).
 Now we would like to check how many of these probabilities are at least as small as our alpha-level, i.e. surprising enough to conclude the coin was not fair.
 We do this by checking for each value whether it was .001 or smaller (<code>p_heads &lt; .001</code>).
-This will result in another vector of 0 when the condition is false and 1 when the condition is true<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>.
+This will result in another vector of 0 when the condition is false and 1 when the condition is true<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>.
 Taking the mean of this vector will give us the probability of rejecting the null-hypothesis while we actually know it is incorrect (as we put the bias in the coin ourselves).
 Again, this will give us the power.
 In the present case with 20 coin-tosses the power is <code>exp_power</code> = 0.004 or 0.4 percent.
@@ -1127,7 +1151,7 @@ To read an awesome explanation about this, look at <a href="https://lesslikely.c
 <li id="fn2"><p>Why is the order important here?
 Because orders do identify unique outcomes.
 If we do not consider entire sequences, we might be inclined to think that there are only four possibilities: 3xHEADS, 2xHEADS, 1xHEADS and 0xHEADS, and that each of these events is equally likely.
-However, how likely eah of these events is depends on how many different sequences can produce it.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+However, how likely each of these events is depends on how many different sequences can produce it.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>I looked it up and apparently this number (a one followed by 30 zeros) is called a <em>Nonillion</em>. It is so big, that apparently the number of bacterial cells on earth is estimated at <a href="https://www.pnas.org/content/95/12/6578">5 Nonillion</a>.
 So I do not recommend trying to write down all possibilities…<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p><code>R</code> excludes the first number here, so that is why we start at 54 rather than 55<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
@@ -1141,18 +1165,19 @@ Of course assuming coin-fairness is the most logical thing to do here but in rea
 If you keep increasing the sample size, at some point the effect will always be significant, no matter how small the deviation is.
 This is, we could even find the unfairness of the coin if it is only 51%.
 But is this 51% really big enough to care about?
-Maybe, maybe not, but we can define a <em>smallest effect size of interest</em> and use <em>Equivalance testing</em> in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
+Maybe, maybe not, but we can define a <em>smallest effect size of interest</em> and use <em>Equivalence testing</em> in which the null-hypothesis is a certain range of small deviations from the actual point of no-difference in which we say that the effect is too small to care about.
 Equivalence testing is not new but surprisingly unknown and/or uncommon in the psychological literature.
 If you are interested in Equivalence Testing, you should check out the great <a href="https://journals.sagepub.com/doi/10.1177/2515245918770963">paper(s)</a> and <a href="http://daniellakens.blogspot.com/2018/08/equivalence-testing-and-second.html">blog-post(s)</a> about it by <a href="http://daniellakens.blogspot.com/">Daniel Lakens</a> and colleagues.<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Software like G*Power often uses different standardized effect sizes for different anaylses.
+<li id="fn7"><p>For those unfamiliar with this reference: Consider watching Dark Knight, it’s a great movie. In short, the displayed character, Harvey Dent, a former state lawyer, falls from grace and and loses his faith in the law system. He takes the law into his own hands and decides whether people will be sentenced (i.e. killed) by tossing a coin.<a href="#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Software like G*Power often uses different standardized effect sizes for different analyses.
 However, in many cases standardized effect-sizes can be converted into each other.
-If you ever need to do such a thing, <a href="http://hauselin.com">Hause Lin</a> made a nice <a href="http://escal.site/">conversion app</a>.<a href="#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>For those unfamiliar with this reference: First, consider watching Dark Knight, it’s a great movie. Second, this character (Harvey Dent, a former state lawyer) decides whether or not to sentence (kill) people by tossing a coin.<a href="#fnref8" class="footnote-back">↩︎</a></p></li>
+If you ever need to do such a thing, <a href="http://hauselin.com">Hause Lin</a> made a nice <a href="http://escal.site/">conversion app</a>.<a href="#fnref8" class="footnote-back">↩︎</a></p></li>
 <li id="fn9"><p>Thereby justifying our alpha-level in this toy example.<a href="#fnref9" class="footnote-back">↩︎</a></p></li>
-<li id="fn10"><p>You can see that is it not a simulation as you will always get the <em>exact same</em> result whenever you run the code above.<a href="#fnref10" class="footnote-back">↩︎</a></p></li>
-<li id="fn11"><p>In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
-If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.<a href="#fnref11" class="footnote-back">↩︎</a></p></li>
-<li id="fn12"><p>Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangable, allowing us to calculate the mean in the same way.<a href="#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>This might be a good point to open G*Power (maybe for the last time ever), to see whether you get the same conclusions there (spoiler: you will, and if not, that only shows that software like this is not necessarily easier to use).<a href="#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p>You can see that is it not a simulation as you will always get the <em>exact same</em> result whenever you run the code above.<a href="#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>In other words, instead of writing all possible coin-toss sequences down and counting how many of them would produce 55% heads with a certain amount of tosses, we could just run very many experiments in which we for example throw a coin 20 times.
+If we repeat these 20 tosses 1,000 times, we get an approximation of how many heads the toss sequences produce on average.<a href="#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>Technically the vector contains FALSE instead of 0 and TRUE instead of 1. However, in R, and many other programming languages, the two are interchangeable, allowing us to calculate the mean in the same way.<a href="#fnref13" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
@@ -1185,7 +1210,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1198,7 +1223,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1211,7 +1236,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1224,7 +1249,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1237,7 +1262,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1250,7 +1275,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1290,7 +1315,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="/">Julian Quandt</a></h5>
+      <h5 class="card-title"><a href="https://julianquandt.github.io/">Julian Quandt</a></h5>
       <h6 class="card-subtitle">PhD student</h6>
       <p class="card-text">just a regular person.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -1502,16 +1527,6 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">
