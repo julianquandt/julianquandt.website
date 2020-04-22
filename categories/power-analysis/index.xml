@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Power Analysis | Julian Quandt</title>
-    <link>https://julianquandt.github.io/categories/power-analysis/</link>
-      <atom:link href="https://julianquandt.github.io/categories/power-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/power-analysis/</link>
+      <atom:link href="/categories/power-analysis/index.xml" rel="self" type="application/rss+xml" />
     <description>Power Analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Power Analysis</title>
-      <link>https://julianquandt.github.io/categories/power-analysis/</link>
+      <link>/categories/power-analysis/</link>
     </image>
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part I</title>
-      <link>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</link>
+      <link>/post/power-analysis-by-data-simulation-in-r-part-i/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
+      <guid>/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
       <description>
-&lt;script src=&#34;https://julianquandt.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -31,7 +31,7 @@
 &lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.github.io/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -54,7 +54,7 @@ First, they urge the user to familiarize themselves with a new piece of software
 Second, and more importantly, these interfaces promote a statistical way of thinking that often leaves the user confused with what the ever-changing parameters (think of these &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f^2\)&lt;/span&gt; and vague “group-size” and “measurement-point” fields) that need to be filled in mean.
 Moreover, these parameters differ for most designs and give an impression that power-analysis is complicated business better left to statisticians or that it might not be worth the effort.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 1. Me trying to figure out how to use a standard power-analysis software.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -85,7 +85,7 @@ At the end of part IV of this tutorial, you will know how to do your own custom 
 &lt;div id=&#34;power-analysis-by-simulation-a-sustainable-alternative&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Power Analysis by Simulation (a sustainable alternative)&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://julianquandt.github.io/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 2. The proof that there are alternative ways to how we normally get our power.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -249,7 +249,7 @@ p_heads &amp;lt;- pbinom(q = n_heads, size = 100, prob = .5, lower.tail = F)  # 
 plot(n_heads, p_heads)
 abline(h = .01)
 abline(v = n_heads[p_heads &amp;lt; .01][1])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://julianquandt.github.io/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Using the above we see that the at 62 tosses, i.e. the 9th element of the vector is the first probability that is smaller than .01, in this case 0.006.
 In other words, getting 62 or more heads in 100 tosses would only happen extremely rarely, in 1 out of 62 cases.
 Thus actually getting 62 heads is pretty surprising and if something like that happened we might conclude that a coin is unfair.&lt;/p&gt;
@@ -351,7 +351,7 @@ Figure 4 shows the increase in power with increasing sample-size.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss-1),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;https://julianquandt.github.io/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 4. Change in power until we reach 90% indicated by the red horizontal line.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -450,7 +450,7 @@ We can also plot all these values again as done in Figure 6.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;https://julianquandt.github.io/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 6. Observed power in the simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -489,7 +489,7 @@ If we look at Figure 7, we also see that now the power-increase follows a more s
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;https://julianquandt.github.io/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 7. Power curve for a more precise simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
