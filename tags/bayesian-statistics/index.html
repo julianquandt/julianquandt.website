@@ -31,7 +31,7 @@
   <meta name="description" content="PhD student">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tags/bayesian-statistics/">
+  <link rel="alternate" hreflang="en-us" href="https://julianquandt.github.io/tags/bayesian-statistics/">
 
   
 
@@ -207,6 +207,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164327345-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-164327345-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -218,7 +254,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/tags/bayesian-statistics/">
+  <link rel="canonical" href="https://julianquandt.github.io/tags/bayesian-statistics/">
 
   
   
@@ -232,7 +268,7 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Julian Quandt">
-  <meta property="og:url" content="/tags/bayesian-statistics/">
+  <meta property="og:url" content="https://julianquandt.github.io/tags/bayesian-statistics/">
   <meta property="og:title" content="bayesian statistics | Julian Quandt">
   <meta property="og:description" content="PhD student"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
@@ -632,16 +668,6 @@
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">

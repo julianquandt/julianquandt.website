@@ -31,7 +31,7 @@
   <meta name="description" content="This part provides an introduction, some background on power-calculation and data-simulation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="alternate" hreflang="en-us" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
 
@@ -207,6 +207,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164327345-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-164327345-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -216,7 +252,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <link rel="canonical" href="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
 
   
   
@@ -230,7 +266,7 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Julian Quandt">
-  <meta property="og:url" content="/post/power-analysis-by-data-simulation-in-r-part-i/">
+  <meta property="og:url" content="https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/">
   <meta property="og:title" content="Power Analysis by Data Simulation in R - Part I | Julian Quandt">
   <meta property="og:description" content="This part provides an introduction, some background on power-calculation and data-simulation."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
@@ -264,7 +300,7 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/post/power-analysis-by-data-simulation-in-r-part-i/"
+    "@id": "https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/"
   },
   "headline": "Power Analysis by Data Simulation in R - Part I",
   
@@ -281,7 +317,7 @@
     "name": "Julian Quandt",
     "logo": {
       "@type": "ImageObject",
-      "url": "img//"
+      "url": "img/https://julianquandt.github.io/"
     }
   },
   "description": "This part provides an introduction, some background on power-calculation and data-simulation."
@@ -1217,7 +1253,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1230,7 +1266,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;t=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1243,7 +1279,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I&amp;body=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1256,7 +1292,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1269,7 +1305,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I%20https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1282,7 +1318,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://julianquandt.github.io/post/power-analysis-by-data-simulation-in-r-part-i/&amp;title=Power%20Analysis%20by%20Data%20Simulation%20in%20R%20-%20Part%20I" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1322,7 +1358,7 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="/">Julian Quandt</a></h5>
+      <h5 class="card-title"><a href="https://julianquandt.github.io/">Julian Quandt</a></h5>
       <h6 class="card-subtitle">PhD student</h6>
       <p class="card-text">just a regular person.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -1534,16 +1570,6 @@ If we repeat these 20 tosses 1,000 times, we get an approximation of how many he
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">

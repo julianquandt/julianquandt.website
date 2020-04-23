@@ -31,7 +31,7 @@
   <meta name="description" content="PhD student">
 
   
-  <link rel="alternate" hreflang="en-us" href="/tags/">
+  <link rel="alternate" hreflang="en-us" href="https://julianquandt.github.io/tags/">
 
   
 
@@ -207,6 +207,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164327345-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-164327345-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -218,7 +254,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/tags/">
+  <link rel="canonical" href="https://julianquandt.github.io/tags/">
 
   
   
@@ -232,12 +268,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Julian Quandt">
-  <meta property="og:url" content="/tags/">
+  <meta property="og:url" content="https://julianquandt.github.io/tags/">
   <meta property="og:title" content="Tags | Julian Quandt">
   <meta property="og:description" content="PhD student"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-12-12T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2020-04-22T00:00:00&#43;00:00">
   
 
   
@@ -512,46 +548,6 @@
     
     
     <div>
-      <h2><a href="/tags/bayesian-statistics/" >bayesian statistics</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/brms/" >brms</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/mixed-effect-models/" >mixed-effect models</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/appetite/" >Appetite</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
       <h2><a href="/tags/attention/" >Attention</a></h2>
       <div class="article-style">
         
@@ -608,6 +604,26 @@
       </div>
     </div>
   
+    
+    
+    
+    <div>
+      <h2><a href="/tags/deep-learning/" >Deep Learning</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/tags/demo/" >Demo</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
 
   
 <nav>
@@ -615,8 +631,6 @@
     
     <li class="page-item"><a class="page-link" href="/tags/">&laquo;</a></li>
     
-    
-    <li class="page-item"><a class="page-link" href="/tags/page/3/">&raquo;</a></li>
     
   </ul>
 </nav>
@@ -731,16 +745,6 @@
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">
