@@ -178,6 +178,11 @@
   </url>
   
   <url>
+    <loc>https://julianquandt.com/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://julianquandt.com/tags/appetite/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -244,10 +249,6 @@
   
   <url>
     <loc>https://julianquandt.com/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/courses/</loc>
   </url>
   
 </urlset>
