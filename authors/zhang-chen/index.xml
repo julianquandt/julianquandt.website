@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zhang Chen | Julian Quandt</title>
-    <link>/authors/zhang-chen/</link>
-      <atom:link href="/authors/zhang-chen/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/authors/zhang-chen/</link>
+      <atom:link href="https://julianquandt.com/authors/zhang-chen/index.xml" rel="self" type="application/rss+xml" />
     <description>Zhang Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Zhang Chen</title>
-      <link>/authors/zhang-chen/</link>
+      <link>https://julianquandt.com/authors/zhang-chen/</link>
     </image>
     
     <item>
       <title>When Mere Action versus Inaction Leads to Robust Preference Change</title>
-      <link>/publication/chen-when-mere-action-2019/</link>
+      <link>https://julianquandt.com/publication/chen-when-mere-action-2019/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/chen-when-mere-action-2019/</guid>
+      <guid>https://julianquandt.com/publication/chen-when-mere-action-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Updating the P-Curve Analysis of Carbine and Larson with Results from Preregistered Experiments</title>
-      <link>/publication/veling-updating-pcurve-analysis-2019/</link>
+      <link>https://julianquandt.com/publication/veling-updating-pcurve-analysis-2019/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/veling-updating-pcurve-analysis-2019/</guid>
+      <guid>https://julianquandt.com/publication/veling-updating-pcurve-analysis-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Role of Attention in Explaining the No-Go Devaluation Effect: Effects on Appetitive Food Items</title>
-      <link>/publication/quandt-role-attention-explaining-2019/</link>
+      <link>https://julianquandt.com/publication/quandt-role-attention-explaining-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/quandt-role-attention-explaining-2019/</guid>
+      <guid>https://julianquandt.com/publication/quandt-role-attention-explaining-2019/</guid>
       <description></description>
     </item>
     
