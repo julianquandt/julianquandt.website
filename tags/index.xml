@@ -5,44 +5,12 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
       <link>/tags/</link>
     </image>
-    
-    <item>
-      <title>confidence</title>
-      <link>/tags/confidence/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/confidence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sequential sampling</title>
-      <link>/tags/sequential-sampling/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/sequential-sampling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>value-based decisions</title>
-      <link>/tags/value-based-decisions/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/value-based-decisions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>values</title>
-      <link>/tags/values/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/values/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>data-simulation</title>
@@ -57,6 +25,38 @@
       <link>/tags/power/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       <guid>/tags/power/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>confidence</title>
+      <link>/tags/confidence/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/confidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sequential sampling</title>
+      <link>/tags/sequential-sampling/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/sequential-sampling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>value-based decisions</title>
+      <link>/tags/value-based-decisions/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/value-based-decisions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>values</title>
+      <link>/tags/values/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/values/</guid>
       <description></description>
     </item>
     

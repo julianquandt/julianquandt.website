@@ -18,67 +18,17 @@
   </url>
   
   <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/confidence/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/confidence-in-vbd/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/julian-quandt/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+    <loc>/tags/data-simulation/</loc>
+    <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-05-12T12:19:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/phd-project/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/sequential-sampling/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-05-12T12:19:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/value-based-decisions/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/values/</loc>
-    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data-simulation/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
@@ -103,8 +53,58 @@
   </url>
   
   <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-12T12:19:48+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/power-analysis-by-data-simulation-in-r-part-i/</loc>
     <lastmod>2020-04-24T12:00:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/confidence/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/confidence-in-vbd/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/julian-quandt/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/phd-project/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sequential-sampling/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/value-based-decisions/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/values/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
   </url>
   
   <url>

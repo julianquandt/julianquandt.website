@@ -5,7 +5,7 @@
     <link>/categories/</link>
       <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>phd-project</title>
-      <link>/categories/phd-project/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>/categories/phd-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Power Analysis</title>
       <link>/categories/power-analysis/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       <guid>/categories/power-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phd-project</title>
+      <link>/categories/phd-project/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/categories/phd-project/</guid>
       <description></description>
     </item>
     
