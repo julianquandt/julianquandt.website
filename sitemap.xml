@@ -3,257 +3,296 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://julianquandt.com/courses/example/example1/</loc>
+    <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/courses/example/</loc>
+    <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/courses/example/example2/</loc>
+    <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/categories/</loc>
+    <loc>/authors/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/data-simulation/</loc>
+    <loc>/tags/confidence/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/confidence-in-vbd/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/julian-quandt/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/</loc>
+    <loc>/categories/phd-project/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sequential-sampling/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/post/</loc>
+    <loc>/tags/value-based-decisions/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/values/</loc>
+    <lastmod>2020-01-16T18:09:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/data-simulation/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/power/</loc>
+    <loc>/post/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/categories/power-analysis/</loc>
+    <loc>/tags/power/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-ii/</loc>
+    <loc>/categories/power-analysis/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/</loc>
+    <loc>/post/power-analysis-by-data-simulation-in-r-part-ii/</loc>
     <lastmod>2020-05-12T12:19:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/</loc>
+    <loc>/post/power-analysis-by-data-simulation-in-r-part-i/</loc>
     <lastmod>2020-04-24T12:00:44+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/</loc>
+    <loc>/tags/bayes-factor/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/bayes-factor/</loc>
+    <loc>/talk/extending_stats_toolbox/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/talk/extending_stats_toolbox/</loc>
+    <loc>/tags/p-value/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/julian-quandt/</loc>
+    <loc>/tags/statistical-testing/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/p-value/</loc>
+    <loc>/tags/statistics/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/talk/</loc>
+    <loc>/categories/statistics/</loc>
     <lastmod>2020-01-16T18:00:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/statistical-testing/</loc>
-    <lastmod>2020-01-16T18:00:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/tags/statistics/</loc>
-    <lastmod>2020-01-16T18:00:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/categories/statistics/</loc>
-    <lastmod>2020-01-16T18:00:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/publication_types/2/</loc>
+    <loc>/publication_types/2/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/ap-dijksterhuis/</loc>
+    <loc>/authors/ap-dijksterhuis/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/harm-veling/</loc>
+    <loc>/authors/harm-veling/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/publication_types/</loc>
+    <loc>/publication_types/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/publication/</loc>
+    <loc>/publication/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/rob-w.-holland/</loc>
+    <loc>/authors/rob-w.-holland/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/publication/chen-when-mere-action-2019/</loc>
+    <loc>/publication/chen-when-mere-action-2019/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/zhang-chen/</loc>
+    <loc>/authors/zhang-chen/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/huaiyu-liu/</loc>
+    <loc>/authors/huaiyu-liu/</loc>
     <lastmod>2019-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/publication/veling-updating-pcurve-analysis-2019/</loc>
+    <loc>/publication/veling-updating-pcurve-analysis-2019/</loc>
     <lastmod>2019-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/bayesian-statistics/</loc>
+    <loc>/tags/bayesian-statistics/</loc>
     <lastmod>2020-01-16T17:52:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/brms/</loc>
+    <loc>/tags/brms/</loc>
     <lastmod>2020-01-16T17:52:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/talk/brms-at-sips/</loc>
+    <loc>/talk/brms-at-sips/</loc>
     <lastmod>2020-01-16T17:52:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/johannes-algermissen/</loc>
+    <loc>/authors/johannes-algermissen/</loc>
     <lastmod>2020-01-16T17:52:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/mixed-effect-models/</loc>
+    <loc>/tags/mixed-effect-models/</loc>
     <lastmod>2020-01-16T17:52:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/tags/appetite/</loc>
+    <loc>/tags/appetite/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/attention/</loc>
+    <loc>/tags/attention/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/food/</loc>
+    <loc>/tags/food/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/motor-processes/</loc>
+    <loc>/tags/motor-processes/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/perceptual-motor-learning/</loc>
+    <loc>/tags/perceptual-motor-learning/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/responses/</loc>
+    <loc>/tags/responses/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/publication/quandt-role-attention-explaining-2019/</loc>
+    <loc>/publication/quandt-role-attention-explaining-2019/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/training/</loc>
+    <loc>/tags/training/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/deep-learning/</loc>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/tags/demo/</loc>
+    <loc>/tags/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/project/external-project/</loc>
+    <loc>/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/project/internal-project/</loc>
+    <loc>/project/internal-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/project/</loc>
+    <loc>/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://julianquandt.com/authors/admin/</loc>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/courses/</loc>
   </url>
   
 </urlset>
