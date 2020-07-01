@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Julian Quandt</title>
-    <link>/categories/</link>
-      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://julianquandt.com/categories/</link>
+      <atom:link href="http://julianquandt.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
-      <link>/categories/</link>
+      <link>http://julianquandt.com/categories/</link>
     </image>
     
     <item>
       <title>Power Analysis</title>
-      <link>/categories/power-analysis/</link>
+      <link>http://julianquandt.com/categories/power-analysis/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/categories/power-analysis/</guid>
+      <guid>http://julianquandt.com/categories/power-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>phd-project</title>
-      <link>/categories/phd-project/</link>
+      <link>http://julianquandt.com/categories/phd-project/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/phd-project/</guid>
+      <guid>http://julianquandt.com/categories/phd-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>/categories/statistics/</link>
+      <link>http://julianquandt.com/categories/statistics/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/statistics/</guid>
+      <guid>http://julianquandt.com/categories/statistics/</guid>
       <description></description>
     </item>
     

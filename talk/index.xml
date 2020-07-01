@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | Julian Quandt</title>
-    <link>/talk/</link>
-      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://julianquandt.com/talk/</link>
+      <atom:link href="http://julianquandt.com/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>/talk/</link>
+      <link>http://julianquandt.com/talk/</link>
     </image>
     
     <item>
       <title>Confidence in Values and Value-based Choice @ ASPO 2019</title>
-      <link>/talk/confidence-in-vbd/</link>
+      <link>http://julianquandt.com/talk/confidence-in-vbd/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/confidence-in-vbd/</guid>
+      <guid>http://julianquandt.com/talk/confidence-in-vbd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Extending the Statistical Toolbox @ BSI PhD-Day 2019</title>
-      <link>/talk/extending_stats_toolbox/</link>
+      <link>http://julianquandt.com/talk/extending_stats_toolbox/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/extending_stats_toolbox/</guid>
+      <guid>http://julianquandt.com/talk/extending_stats_toolbox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Introduction to `brms` @ SIPS 2019</title>
-      <link>/talk/brms-at-sips/</link>
+      <link>http://julianquandt.com/talk/brms-at-sips/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/brms-at-sips/</guid>
+      <guid>http://julianquandt.com/talk/brms-at-sips/</guid>
       <description></description>
     </item>
     

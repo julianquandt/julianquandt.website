@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>statistical testing | Julian Quandt</title>
-    <link>/tags/statistical-testing/</link>
-      <atom:link href="/tags/statistical-testing/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://julianquandt.com/tags/statistical-testing/</link>
+      <atom:link href="http://julianquandt.com/tags/statistical-testing/index.xml" rel="self" type="application/rss+xml" />
     <description>statistical testing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 08 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>statistical testing</title>
-      <link>/tags/statistical-testing/</link>
+      <link>http://julianquandt.com/tags/statistical-testing/</link>
     </image>
     
     <item>
       <title>Extending the Statistical Toolbox @ BSI PhD-Day 2019</title>
-      <link>/talk/extending_stats_toolbox/</link>
+      <link>http://julianquandt.com/talk/extending_stats_toolbox/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/talk/extending_stats_toolbox/</guid>
+      <guid>http://julianquandt.com/talk/extending_stats_toolbox/</guid>
       <description></description>
     </item>
     
