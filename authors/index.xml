@@ -2,77 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Julian Quandt</title>
-    <link>http://julianquandt.com/authors/</link>
-      <atom:link href="http://julianquandt.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/authors/</link>
+      <atom:link href="https://julianquandt.com/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 12 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Authors</title>
-      <link>http://julianquandt.com/authors/</link>
+      <link>https://julianquandt.com/authors/</link>
     </image>
     
     <item>
       <title>Julian Quandt</title>
-      <link>http://julianquandt.com/authors/julian-quandt/</link>
+      <link>https://julianquandt.com/authors/julian-quandt/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/julian-quandt/</guid>
+      <guid>https://julianquandt.com/authors/julian-quandt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ap Dijksterhuis</title>
-      <link>http://julianquandt.com/authors/ap-dijksterhuis/</link>
+      <link>https://julianquandt.com/authors/ap-dijksterhuis/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/ap-dijksterhuis/</guid>
+      <guid>https://julianquandt.com/authors/ap-dijksterhuis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Harm Veling</title>
-      <link>http://julianquandt.com/authors/harm-veling/</link>
+      <link>https://julianquandt.com/authors/harm-veling/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/harm-veling/</guid>
+      <guid>https://julianquandt.com/authors/harm-veling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rob W. Holland</title>
-      <link>http://julianquandt.com/authors/rob-w.-holland/</link>
+      <link>https://julianquandt.com/authors/rob-w.-holland/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/rob-w.-holland/</guid>
+      <guid>https://julianquandt.com/authors/rob-w.-holland/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zhang Chen</title>
-      <link>http://julianquandt.com/authors/zhang-chen/</link>
+      <link>https://julianquandt.com/authors/zhang-chen/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/zhang-chen/</guid>
+      <guid>https://julianquandt.com/authors/zhang-chen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Huaiyu Liu</title>
-      <link>http://julianquandt.com/authors/huaiyu-liu/</link>
+      <link>https://julianquandt.com/authors/huaiyu-liu/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/huaiyu-liu/</guid>
+      <guid>https://julianquandt.com/authors/huaiyu-liu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Johannes Algermissen</title>
-      <link>http://julianquandt.com/authors/johannes-algermissen/</link>
+      <link>https://julianquandt.com/authors/johannes-algermissen/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/johannes-algermissen/</guid>
+      <guid>https://julianquandt.com/authors/johannes-algermissen/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>http://julianquandt.com/authors/admin/</link>
+      <link>https://julianquandt.com/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/authors/admin/</guid>
+      <guid>https://julianquandt.com/authors/admin/</guid>
       <description>&lt;p&gt;A PhD student in the 
 &lt;a href=&#34;https://www.ru.nl/bsi/research/group-pages/behaviour-regulation-change-lab-brace-lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Behaviour Regulation and Change (BRACE) Lab&lt;/a&gt;
  at the 

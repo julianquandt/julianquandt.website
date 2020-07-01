@@ -2,197 +2,197 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Julian Quandt</title>
-    <link>http://julianquandt.com/tags/</link>
-      <atom:link href="http://julianquandt.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/tags/</link>
+      <atom:link href="https://julianquandt.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
-      <link>http://julianquandt.com/tags/</link>
+      <link>https://julianquandt.com/tags/</link>
     </image>
     
     <item>
       <title>data-simulation</title>
-      <link>http://julianquandt.com/tags/data-simulation/</link>
+      <link>https://julianquandt.com/tags/data-simulation/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/data-simulation/</guid>
+      <guid>https://julianquandt.com/tags/data-simulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>power</title>
-      <link>http://julianquandt.com/tags/power/</link>
+      <link>https://julianquandt.com/tags/power/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/power/</guid>
+      <guid>https://julianquandt.com/tags/power/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>http://julianquandt.com/tags/r/</link>
+      <link>https://julianquandt.com/tags/r/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/r/</guid>
+      <guid>https://julianquandt.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>confidence</title>
-      <link>http://julianquandt.com/tags/confidence/</link>
+      <link>https://julianquandt.com/tags/confidence/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/confidence/</guid>
+      <guid>https://julianquandt.com/tags/confidence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sequential sampling</title>
-      <link>http://julianquandt.com/tags/sequential-sampling/</link>
+      <link>https://julianquandt.com/tags/sequential-sampling/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/sequential-sampling/</guid>
+      <guid>https://julianquandt.com/tags/sequential-sampling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>value-based decisions</title>
-      <link>http://julianquandt.com/tags/value-based-decisions/</link>
+      <link>https://julianquandt.com/tags/value-based-decisions/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/value-based-decisions/</guid>
+      <guid>https://julianquandt.com/tags/value-based-decisions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>values</title>
-      <link>http://julianquandt.com/tags/values/</link>
+      <link>https://julianquandt.com/tags/values/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/values/</guid>
+      <guid>https://julianquandt.com/tags/values/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bayes factor</title>
-      <link>http://julianquandt.com/tags/bayes-factor/</link>
+      <link>https://julianquandt.com/tags/bayes-factor/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/bayes-factor/</guid>
+      <guid>https://julianquandt.com/tags/bayes-factor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>p-value</title>
-      <link>http://julianquandt.com/tags/p-value/</link>
+      <link>https://julianquandt.com/tags/p-value/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/p-value/</guid>
+      <guid>https://julianquandt.com/tags/p-value/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistical testing</title>
-      <link>http://julianquandt.com/tags/statistical-testing/</link>
+      <link>https://julianquandt.com/tags/statistical-testing/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/statistical-testing/</guid>
+      <guid>https://julianquandt.com/tags/statistical-testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>http://julianquandt.com/tags/statistics/</link>
+      <link>https://julianquandt.com/tags/statistics/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/statistics/</guid>
+      <guid>https://julianquandt.com/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bayesian statistics</title>
-      <link>http://julianquandt.com/tags/bayesian-statistics/</link>
+      <link>https://julianquandt.com/tags/bayesian-statistics/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/bayesian-statistics/</guid>
+      <guid>https://julianquandt.com/tags/bayesian-statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>brms</title>
-      <link>http://julianquandt.com/tags/brms/</link>
+      <link>https://julianquandt.com/tags/brms/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/brms/</guid>
+      <guid>https://julianquandt.com/tags/brms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mixed-effect models</title>
-      <link>http://julianquandt.com/tags/mixed-effect-models/</link>
+      <link>https://julianquandt.com/tags/mixed-effect-models/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/mixed-effect-models/</guid>
+      <guid>https://julianquandt.com/tags/mixed-effect-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Appetite</title>
-      <link>http://julianquandt.com/tags/appetite/</link>
+      <link>https://julianquandt.com/tags/appetite/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/appetite/</guid>
+      <guid>https://julianquandt.com/tags/appetite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Attention</title>
-      <link>http://julianquandt.com/tags/attention/</link>
+      <link>https://julianquandt.com/tags/attention/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/attention/</guid>
+      <guid>https://julianquandt.com/tags/attention/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Food</title>
-      <link>http://julianquandt.com/tags/food/</link>
+      <link>https://julianquandt.com/tags/food/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/food/</guid>
+      <guid>https://julianquandt.com/tags/food/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Motor Processes</title>
-      <link>http://julianquandt.com/tags/motor-processes/</link>
+      <link>https://julianquandt.com/tags/motor-processes/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/motor-processes/</guid>
+      <guid>https://julianquandt.com/tags/motor-processes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Perceptual Motor Learning</title>
-      <link>http://julianquandt.com/tags/perceptual-motor-learning/</link>
+      <link>https://julianquandt.com/tags/perceptual-motor-learning/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/perceptual-motor-learning/</guid>
+      <guid>https://julianquandt.com/tags/perceptual-motor-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Responses</title>
-      <link>http://julianquandt.com/tags/responses/</link>
+      <link>https://julianquandt.com/tags/responses/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/responses/</guid>
+      <guid>https://julianquandt.com/tags/responses/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Training</title>
-      <link>http://julianquandt.com/tags/training/</link>
+      <link>https://julianquandt.com/tags/training/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/training/</guid>
+      <guid>https://julianquandt.com/tags/training/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>http://julianquandt.com/tags/deep-learning/</link>
+      <link>https://julianquandt.com/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/deep-learning/</guid>
+      <guid>https://julianquandt.com/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>http://julianquandt.com/tags/demo/</link>
+      <link>https://julianquandt.com/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/tags/demo/</guid>
+      <guid>https://julianquandt.com/tags/demo/</guid>
       <description></description>
     </item>
     

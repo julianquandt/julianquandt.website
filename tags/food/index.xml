@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Food | Julian Quandt</title>
-    <link>http://julianquandt.com/tags/food/</link>
-      <atom:link href="http://julianquandt.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/tags/food/</link>
+      <atom:link href="https://julianquandt.com/tags/food/index.xml" rel="self" type="application/rss+xml" />
     <description>Food</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Food</title>
-      <link>http://julianquandt.com/tags/food/</link>
+      <link>https://julianquandt.com/tags/food/</link>
     </image>
     
     <item>
       <title>The Role of Attention in Explaining the No-Go Devaluation Effect: Effects on Appetitive Food Items</title>
-      <link>http://julianquandt.com/publication/quandt-role-attention-explaining-2019/</link>
+      <link>https://julianquandt.com/publication/quandt-role-attention-explaining-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/publication/quandt-role-attention-explaining-2019/</guid>
+      <guid>https://julianquandt.com/publication/quandt-role-attention-explaining-2019/</guid>
       <description></description>
     </item>
     

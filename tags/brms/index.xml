@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>brms | Julian Quandt</title>
-    <link>http://julianquandt.com/tags/brms/</link>
-      <atom:link href="http://julianquandt.com/tags/brms/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/tags/brms/</link>
+      <atom:link href="https://julianquandt.com/tags/brms/index.xml" rel="self" type="application/rss+xml" />
     <description>brms</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>brms</title>
-      <link>http://julianquandt.com/tags/brms/</link>
+      <link>https://julianquandt.com/tags/brms/</link>
     </image>
     
     <item>
       <title>Introduction to `brms` @ SIPS 2019</title>
-      <link>http://julianquandt.com/talk/brms-at-sips/</link>
+      <link>https://julianquandt.com/talk/brms-at-sips/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/talk/brms-at-sips/</guid>
+      <guid>https://julianquandt.com/talk/brms-at-sips/</guid>
       <description></description>
     </item>
     

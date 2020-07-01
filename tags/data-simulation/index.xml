@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data-simulation | Julian Quandt</title>
-    <link>http://julianquandt.com/tags/data-simulation/</link>
-      <atom:link href="http://julianquandt.com/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://julianquandt.com/tags/data-simulation/</link>
+      <atom:link href="https://julianquandt.com/tags/data-simulation/index.xml" rel="self" type="application/rss+xml" />
     <description>data-simulation</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>data-simulation</title>
-      <link>http://julianquandt.com/tags/data-simulation/</link>
+      <link>https://julianquandt.com/tags/data-simulation/</link>
     </image>
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part III</title>
-      <link>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-iii/</link>
+      <link>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-iii/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-iii/</guid>
+      <guid>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-iii/</guid>
       <description>
-&lt;script src=&#34;http://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -28,7 +28,7 @@
 &lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://julianquandt.com/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.com/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -215,7 +215,7 @@ mean_VE &amp;lt;- 60
 pd &amp;lt;- data.frame(score = c(mean_TI, mean_VI, mean_TE, mean_VE), focus = focus, media = media)
 
 interaction.plot(pd$focus, pd$media, pd$score, ylim = c(0,100))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_exp1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_exp1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(pd$score[pd$focus == &amp;quot;internal&amp;quot;]) != mean(pd$score[pd$focus == &amp;quot;external&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(pd$score[pd$media == &amp;quot;text&amp;quot;]) == mean(pd$score[pd$media == &amp;quot;visual&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
@@ -252,7 +252,7 @@ change_TE &amp;lt;- mean_TE-50
 change_VE &amp;lt;- mean_VE-50
 
 barplot(c(change_TI, change_VI, change_TE, change_VE), names.arg = c(&amp;quot;TI&amp;quot;, &amp;quot;VI&amp;quot;, &amp;quot;TE&amp;quot;, &amp;quot;VE&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Thus, this does not seem entirely plausible.
 The VE group increases in their attitude towards cigarettes compared to the assumed population mean and the TI group does not change at all.
 This is not what we would expect.
@@ -274,7 +274,7 @@ mean_VE &amp;lt;- 47
 pd &amp;lt;- data.frame(score = c(mean_TI, mean_VI, mean_TE, mean_VE), focus = focus, media = media)
 
 interaction.plot(pd$focus, pd$media, pd$score, ylim = c(0,100))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_exp2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_exp2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(pd$score[pd$focus == &amp;quot;internal&amp;quot;]) != mean(pd$score[pd$focus == &amp;quot;external&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(pd$score[pd$media == &amp;quot;text&amp;quot;]) == mean(pd$score[pd$media == &amp;quot;visual&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
@@ -536,7 +536,7 @@ while(power_at_n[i-1] &amp;lt; power_crit){
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;power_at_n &amp;lt;- power_at_n[-1] # delete first 0 from the vector&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(as.numeric(names(power_at_n)), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
 abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_power_low_res-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_power_low_res-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We see that at roughly 900 participants our loop ran into a situation where we have sufficient power.
 Thank god we did not do this 1-by-1.
 Now we can have a closer look at sample-sizes between 800 and 900.
@@ -598,7 +598,7 @@ delta_r2s_at_n &amp;lt;- delta_r2s_at_n[-1] # delete first 0 from the vector&lt;
 Later, when we work with mixed models in part IV, we will see how we can run such a simulation on multiple processor-cores simultaneously to solve this problem to at least some extent.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(as.numeric(names(power_at_n)), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
 abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_power-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii_files/figure-html/plot_power-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This power-curve looks a bit odd, as it looks almost flat.
 What this shows however, is that power is not increasing linearly but tends to increase faster at the beginning and slower towards reaching 1.&lt;/p&gt;
 &lt;p&gt;In any case, 890 people &lt;em&gt;per group&lt;/em&gt; would be enough to reach our desired power of .95.
@@ -738,11 +738,11 @@ Thus, in the fourth part, we will see how we can simulate data and run a power-a
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part II</title>
-      <link>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-ii/</link>
+      <link>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-ii/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-ii/</guid>
+      <guid>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-ii/</guid>
       <description>
-&lt;script src=&#34;http://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -761,7 +761,7 @@ Thus, in the fourth part, we will see how we can simulate data and run a power-a
 &lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://julianquandt.com/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.com/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -847,7 +847,7 @@ group2 &amp;lt;- rnorm(30, 0, 2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can visualize the groups that we got in a plot like this:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(group1, col = &amp;quot;#addd8e&amp;quot;, breaks = 10, main = &amp;quot;Histogram of both groups&amp;quot;, xlab = &amp;quot;&amp;quot;)
 hist(group2, add = TRUE, breaks = 10, col= &amp;quot;#31a354&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_groups1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_groups1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We can already make important observations from this plot:&lt;/p&gt;
 &lt;p&gt;We wanted to get normal distributions, but what we got here does not really look normal.
 Why is that? Because we only have 30 people per group and taking only 30 values from the specified normal distributions does not really give us a good approximation of the real distribution.
@@ -930,13 +930,13 @@ Thus make a conclusion about the effectiveness of our intervention at the specif
 &lt;p&gt;To visualize the power we can plot it again, just as in the first part of the tutorial.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(30:(n-1), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
 abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Again, this plot shows us how our power to detect the effect slowly increases if we increase the sample-size until it reaches our desired power.&lt;/p&gt;
 &lt;p&gt;There is another interesting observation to make here.
 In the code above, I also calculate the average &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; for each sample size and the plot below shows how it changes with increasing sample-size.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(30:(n-1), cohens_ds_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0.45,0.55), axes = TRUE)
 abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It is not super obvious in this plot and I had to change the scale of the y-axis quite a bit to make it visible, but we can actually see how our average &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; initially deviates slightly more from the desired &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; of .50 than in de end.
 In other words, in the beginning, for small sample-sizes there is more fluctuation than for bigger sample-sizes.
 That is pretty neat, as it seems very desirable that a power-estimation procedure takes into account that for smaller sample-sizes, even if the effect in the population is exactly the same (i.e. we always sample groups with a difference of &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; = .50) it is just less precise.&lt;/p&gt;
@@ -1002,11 +1002,11 @@ cohens_ds_at_n &amp;lt;- cohens_ds_at_n[-1] # delete first NA from the vector&lt
 &lt;p&gt;We can plot the power-curve again&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(2:(n-1), power_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE)
 abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_power_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;and the &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; values:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(2:(n-1), cohens_ds_at_n, xlab = &amp;quot;Number of participants per group&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0.0,1.0), axes = TRUE)
 abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_cohensd_ost-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We see again, and this time more dramatically, how our simulated effect size becomes more accurate the bigger our sample gets.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;using-a-correlated-samples-paired-t-test-approach&#34; class=&#34;section level3&#34;&gt;
@@ -1091,19 +1091,19 @@ sigma&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mfrow=c(1,2))
 hist(bivnorm$pre, main = &amp;quot;pre-measure&amp;quot;)
 hist(bivnorm$post, main = &amp;quot;post-measure&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;However, imagine we would not only look at each histogram seperately but we would combine them into one plot by putting the pre-measure scores of each simulated individual on the x-axis and putting the post-measures on the y-axis like this:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(bivnorm$pre, bivnorm$post, xlab = &amp;quot;pre-measure&amp;quot;, ylab = &amp;quot;post-measure&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the above plot, we can clearly see the correlations between the two measurements that we put in the data.
 More elegantly, we can combine the two histograms in the following way.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bivnorm_kde &amp;lt;- kde2d(bivnorm[,1], bivnorm[,2], n = 50) # calculate kernel density (i.e. the &amp;quot;height of the cone on the z-axis&amp;quot;; not so important to understand here)
 par(mar = c(0, 0, 0, 0)) # tel r not to leave so much space around the plot
 persp(bivnorm_kde, phi = 45, theta = 30, xlab = &amp;quot;pre-measure&amp;quot;, ylab = &amp;quot;post-measure&amp;quot;, zlab = &amp;quot;frequency&amp;quot;) # plot the bivariate normal&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Here, we see clearly how our bivariate normal distribution is nothing more than the 2 normal-distributions of each measurement-point combined into one “cone-shaped” normal distribution that has a certain correlation.&lt;/p&gt;
 &lt;p&gt;The plot below shows how this cone looks with different correlations.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm_cors-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/plot_bivnorm_cors-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice how for higher correlations, the cone becomes more and more narrow and starts looking like a “shark-fin” with a correlation of .90.
 This “narrowring” of the cone is the visualization of why the standard-deviations of the difference scores get more narrow.&lt;/p&gt;
 &lt;p&gt;If we visualize this as a point cloud again the three correlations look like this:&lt;/p&gt;
@@ -1113,7 +1113,7 @@ par(mfrow = c(1,3))
 plot(bivnorm_10$pre, bivnorm_10$post)
 plot(bivnorm$pre, bivnorm$post)
 plot(bivnorm_90$pre, bivnorm_90$post)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/correlation_pointplots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/correlation_pointplots-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This again, clearly shows the manipulatino between the pre- and post measures.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;power-analysis-with-the-multivariate-normal&#34; class=&#34;section level4&#34;&gt;
@@ -1173,7 +1173,7 @@ plot(2:(length(powers_at_cor$`0.5`)+1), powers_at_cor$`0.5`, xlab = &amp;quot;Nu
 abline(h = .95, col = &amp;quot;red&amp;quot;)
 plot(2:(length(powers_at_cor$`0.9`)+1), powers_at_cor$`0.9`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Power&amp;quot;, ylim = c(0,1), axes = TRUE, main = &amp;quot;correlation = 0.9&amp;quot;)
 abline(h = .95, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/powercurve_corr_t-test-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/powercurve_corr_t-test-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Here we see how drastically the correlation influences the power in this situation.
 With a high correlation, we need only very few participants to achieve the desired power in the specified case.
 Why is this?
@@ -1186,7 +1186,7 @@ plot(2:(length(cohens_ds_at_cor$`0.5`)+1), cohens_ds_at_cor$`0.5`, xlab = &amp;q
 abline(h = .50, col = &amp;quot;red&amp;quot;)
 plot(2:(length(cohens_ds_at_cor$`0.9`)+1), cohens_ds_at_cor$`0.9`, xlab = &amp;quot;Number of participants&amp;quot;, ylab = &amp;quot;Cohens D&amp;quot;, ylim = c(0,10), axes = TRUE, main = &amp;quot;correlation = 0.9&amp;quot;)
 abline(h = .50, col = &amp;quot;red&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/cohens_d_corr_ttest-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii_files/figure-html/cohens_d_corr_ttest-1.png&#34; width=&#34;120%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;For .10 the value of the effect-size seems slightly underestimated, for .50 it approaches .50 just as in the two-sample case and for .90 it seems overestimated by quite a bit.
 Did something go wrong?
 Well no. As we’ve seen above &lt;span class=&#34;math inline&#34;&gt;\(Cohen&amp;#39;s\ d\)&lt;/span&gt; is calculated by dividing the mean-difference by the standard-deviation of the difference scores which becomes smaller and smaller with increasing correlation.
@@ -1341,11 +1341,11 @@ To get a good approximation of all the possible samples that we could get that s
     
     <item>
       <title>Power Analysis by Data Simulation in R - Part I</title>
-      <link>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/</link>
+      <link>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
+      <guid>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/</guid>
       <description>
-&lt;script src=&#34;http://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://julianquandt.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -1358,7 +1358,7 @@ To get a good approximation of all the possible samples that we could get that s
 &lt;/div&gt;
 
 &lt;html&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://julianquandt.com/css/style.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://julianquandt.com/css/style.css&#34; /&gt;
 &lt;/html&gt;
 &lt;p&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -1382,7 +1382,7 @@ First, they urge the user to familiarize themselves with a new piece of software
 Second, and more importantly, these interfaces promote a statistical way of thinking that often leaves the user confused with what the ever-changing parameters (think of these &lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; , &lt;span class=&#34;math inline&#34;&gt;\(d\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(f^2\)&lt;/span&gt; and vague “group-size” and “measurement-point” fields) that need to be filled in mean.
 Moreover, these parameters differ for most designs and give an impression that power-analysis is complicated business better left to statisticians or that it might not be worth the effort.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&#34;http://julianquandt.com/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.com/img/power-tutorial/me-doing-pa.jpg&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 1. Me trying to figure out how to use a standard power-analysis software.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -1413,7 +1413,7 @@ At the end of part IV of this tutorial, you will know how to do your own custom 
 &lt;div id=&#34;power-analysis-by-simulation-a-sustainable-alternative&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Power Analysis by Simulation (a sustainable alternative)&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&#34;http://julianquandt.com/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
+&lt;img src=&#34;https://julianquandt.com/img/power-tutorial/new-power.jpg&#34; width=&#34;500&#34;/&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 2. The proof that there are alternative ways to how we normally get our power.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -1577,7 +1577,7 @@ p_heads &amp;lt;- pbinom(q = n_heads, size = 100, prob = .5, lower.tail = F)  # 
 plot(n_heads, p_heads)
 abline(h = .01)
 abline(v = n_heads[p_heads &amp;lt; .01][1])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/caclulate_p1percent-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Using the above we see that the at 62 tosses, i.e. the 9th element of the vector is the first probability that is smaller than .01, in this case 0.006.
 In other words, getting 62 or more heads in 100 tosses would only happen extremely rarely, in 1 out of 62 cases.
 Thus actually getting 62 heads is pretty surprising and if something like that happened we might conclude that a coin is unfair.&lt;/p&gt;
@@ -1679,7 +1679,7 @@ Figure 4 shows the increase in power with increasing sample-size.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss-1),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;http://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/power-curve1-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 4. Change in power until we reach 90% indicated by the red horizontal line.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -1778,7 +1778,7 @@ We can also plot all these values again as done in Figure 6.&lt;/p&gt;
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;http://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure6-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 6. Observed power in the simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
@@ -1817,7 +1817,7 @@ If we look at Figure 7, we also see that now the power-increase follows a more s
 abline(h = .90, col = &amp;quot;red&amp;quot;)
 axis(side = 1, at = seq(0,(n_toss),by=100))
 axis(side = 2, at = seq(0,1,by=0.1))&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;http://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://julianquandt.com/post/2020-04-22-power-analysis-by-data-simulation-in-r-part-i_files/figure-html/figure7-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;figcaption&gt;
 &lt;em&gt;Figure 7. Power curve for a more precise simulation.&lt;/em&gt;
 &lt;/figcaption&gt;
