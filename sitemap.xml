@@ -3,63 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://julianquandt.com/courses/example/example1/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://julianquandt.com/courses/example/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://julianquandt.com/categories/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/tags/data-simulation/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/post/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/tags/power/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/categories/power-analysis/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-iii/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/tags/r/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://julianquandt.com/tags/</loc>
-    <lastmod>2020-06-17T12:15:10+00:00</lastmod>
+    <lastmod>2020-07-01T12:55:40+00:00</lastmod>
   </url>
   
   <url>
@@ -293,6 +278,10 @@
   
   <url>
     <loc>https://julianquandt.com/courses/</loc>
+  </url>
+  
+  <url>
+    <loc>https://julianquandt.com/resources/</loc>
   </url>
   
 </urlset>

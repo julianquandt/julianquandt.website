@@ -51,6 +51,7 @@ button.btn:before
     width:15px;
 }
 &lt;/style&gt;
+&lt;p&gt;&lt;em&gt;This blog is also available on &lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-Bloggers&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;the-power-analysis-by-simulation-in-r-for-really-any-design---part-iii&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;The Power Analysis by simulation in &lt;code&gt;R&lt;/code&gt; for really any design - Part III&lt;/h1&gt;
 &lt;p&gt;This is Part III of my tutorial on how to do power-analysis by simulation.
