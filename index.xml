@@ -32,7 +32,7 @@
 &lt;/html&gt;
 &lt;div class=&#34;notebox&#34;&gt;
 &lt;p&gt;
-&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii.Rmd%22&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-06-16-power-analysis-by-data-simulation-in-r-part-iii.Rmd&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
 &lt;em&gt;This blog is also available on &lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-Bloggers&lt;/a&gt;&lt;/em&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -764,7 +764,7 @@ Thus, in the fourth part, we will see how we can simulate data and run a power-a
 &lt;/html&gt;
 &lt;div class=&#34;notebox&#34;&gt;
 &lt;p&gt;
-&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii.Rmd%22&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-05-12-power-analysis-by-data-simulation-in-r-part-ii.Rmd&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This blog is also available on &lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-Bloggers&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -1359,7 +1359,7 @@ To get a good approximation of all the possible samples that we could get that s
 &lt;/html&gt;
 &lt;div class=&#34;notebox&#34;&gt;
 &lt;p&gt;
-&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-04-22-power-analysis-by-data-simulation-in-r-part-i.Rmd%22&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://julianquandt.com/rmd_files/2020-04-22-power-analysis-by-data-simulation-in-r-part-i.Rmd&#34;&gt;HERE&lt;/a&gt; to download the .Rmd file&lt;/strong&gt;&lt;/p&gt;
 &lt;em&gt;This blog is also available on &lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-Bloggers&lt;/a&gt;&lt;/em&gt;
 &lt;/p&gt;
 &lt;/div&gt;
